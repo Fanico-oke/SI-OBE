@@ -29,8 +29,7 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
-const uploadsPath = (process.env.VERCEL === '1' || process.env.VERCEL_ENV !== undefined) ? '/tmp/uploads' : 'uploads';
-app.use('/uploads', express.static(uploadsPath));
+app.use('/uploads', express.static('uploads'));
 
 // --- API Status ---
 app.get('/api/status', (req, res) => {
@@ -73,6 +72,3 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
-
-// Export for Vercel serverless
-export default app;

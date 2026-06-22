@@ -4,14 +4,12 @@ import path from 'path';
 import fs from 'fs';
 import { prisma } from '../lib/prisma';
 
-import { getUploadsDir } from '../lib/uploads';
-
 const router = express.Router();
 
 // Multer config for file uploads
 const storage = multer.diskStorage({
   destination: (_req, _file, cb) => {
-    const dir = getUploadsDir('dokumentasi');
+    const dir = path.join(__dirname, '../../uploads/dokumentasi');
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     cb(null, dir);
   },
@@ -145,7 +143,7 @@ router.delete('/:id', async (req, res) => {
       try {
         const files = JSON.parse(doc.lampiran);
         for (const f of files) {
-          const filePath = path.join(getUploadsDir('dokumentasi'), f.fileName);
+          const filePath = path.join(__dirname, '../../uploads/dokumentasi', f.fileName);
           if (fs.existsSync(filePath)) fs.unlinkSync(filePath);
         }
       } catch { }
@@ -161,7 +159,7 @@ router.delete('/:id', async (req, res) => {
 
 // GET /api/dokumentasi/file/:filename — serve uploaded file
 router.get('/file/:filename', (req, res) => {
-  const filePath = path.join(getUploadsDir('dokumentasi'), req.params.filename);
+  const filePath = path.join(__dirname, '../../uploads/dokumentasi', req.params.filename);
   if (!fs.existsSync(filePath)) return res.status(404).json({ error: 'File not found' });
   res.sendFile(filePath);
 });

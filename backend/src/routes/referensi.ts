@@ -4,7 +4,6 @@ import { authorize } from '../middleware/auth';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
-import { getUploadsDir } from '../lib/uploads';
 
 const router = Router();
 
@@ -12,7 +11,7 @@ const router = Router();
 // Multer config for referensi uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadDir = getUploadsDir('referensi');
+    const uploadDir = path.join(__dirname, '../../uploads/referensi');
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
     }
