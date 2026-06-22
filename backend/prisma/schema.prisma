@@ -1,0 +1,593 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ------------------------------------
+// ENTITAS PENGGUNA (RBAC)
+// ------------------------------------
+model User {
+  id           String   @id @default(uuid())
+  username     String   @unique
+  password     String
+  nama         String
+  role         String   // ADMIN, KAPRODI, DOSEN, MAHASISWA
+  email        String?
+  phone        String?
+  bio          String?  @db.Text
+  nidn         String?
+  faculty      String?
+  institution  String?
+  avatarUrl    String?
+  lastLoginAt  DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  notifications Notification[]
+  kelas         Kelas[]
+}
+
+// ------------------------------------
+// ENTITAS KURIKULUM
+// ------------------------------------
+model Kurikulum {
+  id              String   @id @default(uuid())
+  nama            String
+  prodi           String
+  tahunMulai      Int
+  tahunSelesai    Int
+  deskripsi       String?  @db.Text
+  tujuan          String?  @db.Text
+  levelKkni       String?  @default("Level 6")
+  referensiAcuan  String?  @db.Text  // JSON array: ["SN-DIKTI","KKNI"]
+  petaOkupasi     String?  @db.Text  // JSON array: ["Pengembangan SI", ...]
+  status          String   @default("DRAFT")
+  checkCompletedAt DateTime?  // Null = Check belum selesai
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  modul        Modul[]
+  actionPlans  ActionPlan[]
+  profilLulusan ProfilLulusan[]
+  cpl          CPL[]
+  cplSnDikti   CPLSnDikti[]
+  bahanKajian  BahanKajian[]
+  mataKuliah     MataKuliah[]
+  referensi      Referensi[]
+  checkFeedback  CheckFeedback[]
+  dokumentasi    DokumentasiKegiatan[]
+}
+
+// ------------------------------------
+// PROFIL LULUSAN (PL)
+// ------------------------------------
+model ProfilLulusan {
+  id           String   @id @default(uuid())
+  kurikulumId  String
+  kode         String   // PL1, PL2, ...
+  deskripsi    String   @db.Text
+  referensi    String?  @db.Text // Referensi Area Fungsi Peta Okupasi
+
+  kurikulum    Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+  pemetaanCPL  PemetaanPLCPL[]
+  pemetaanMK   PemetaanPLMK[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ------------------------------------
+// CAPAIAN PEMBELAJARAN LULUSAN (CPL)
+// ------------------------------------
+model CPL {
+  id           String   @id @default(uuid())
+  kurikulumId  String
+  kode         String   // CPL01, CPL02, ...
+  deskripsi    String   @db.Text
+  kategori     String?  // S, KU, KK, P (untuk CPL SN-DIKTI)
+
+  kurikulum    Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+  pemetaanPL   PemetaanPLCPL[]
+  pemetaanSnDikti PemetaanSnDiktiCPLProdi[]
+  pemetaanBK   PemetaanCPLBK[]
+  pemetaanMK   PemetaanCPLMK[]
+  cpmk         CPMK[]
+  actionPlans  ActionPlan[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ------------------------------------
+// CPL SN-DIKTI
+// ------------------------------------
+model CPLSnDikti {
+  id           String   @id @default(uuid())
+  kurikulumId  String
+  kode         String   // CPL-S01, CPL-KU01, dll
+  deskripsi    String   @db.Text
+  kategori     String   // SIKAP, KETERAMPILAN UMUM, KETERAMPILAN KHUSUS, PENGETAHUAN
+
+  kurikulum    Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+  pemetaanCPL  PemetaanSnDiktiCPLProdi[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ------------------------------------
+// BAHAN KAJIAN (BK)
+// ------------------------------------
+model BahanKajian {
+  id           String   @id @default(uuid())
+  kurikulumId  String
+  kode         String   // BK01, BK02, ...
+  nama         String
+  deskripsi    String?  @db.Text
+
+  kurikulum    Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+  pemetaanCPL  PemetaanCPLBK[]
+  pemetaanMK   PemetaanBKMK[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ------------------------------------
+// MATA KULIAH (MK)
+// ------------------------------------
+model MataKuliah {
+  id              String   @id @default(uuid())
+  kurikulumId     String
+  kode            String   // MK01, MK02, ...
+  nama            String
+  sks             Int      @default(3)
+  semester        Int      @default(1)
+  tipe            String   @default("WAJIB") // WAJIB, PILIHAN, MKWK, MKDU
+
+  kurikulum       Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+  
+  pemetaanPL      PemetaanPLMK[]
+  pemetaanBK      PemetaanBKMK[]
+  pemetaanCPL     PemetaanCPLMK[]
+  pemetaanCPMK    PemetaanMKCPMK[]
+  kelas           Kelas[]
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+// ------------------------------------
+// CPMK & SUB-CPMK
+// ------------------------------------
+model CPMK {
+  id           String   @id @default(uuid())
+  cplId        String
+  kode         String   // CPMK011, CPMK012, ...
+  deskripsi    String   @db.Text
+
+  cpl          CPL      @relation(fields: [cplId], references: [id], onDelete: Cascade)
+  pemetaanMK   PemetaanMKCPMK[]
+  subCpmk      SubCPMK[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SubCPMK {
+  id           String   @id @default(uuid())
+  cpmkId       String
+  kode         String   // L1, L2, L3...
+  deskripsi    String   @db.Text
+
+  cpmk         CPMK     @relation(fields: [cpmkId], references: [id], onDelete: Cascade)
+  penilaian    Penilaian[]
+  asesmenSoal  AsesmenSoal[]
+  rpsPertemuan RPSPertemuan[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+
+// ------------------------------------
+// TABEL PEMETAAN (Matriks Silang)
+// ------------------------------------
+model PemetaanPLCPL {
+  id           String   @id @default(uuid())
+  plId         String
+  cplId        String
+
+  pl           ProfilLulusan @relation(fields: [plId], references: [id], onDelete: Cascade)
+  cpl          CPL           @relation(fields: [cplId], references: [id], onDelete: Cascade)
+
+  @@unique([plId, cplId])
+}
+
+model PemetaanPLMK {
+  id           String   @id @default(uuid())
+  plId         String
+  mkId         String
+
+  pl           ProfilLulusan @relation(fields: [plId], references: [id], onDelete: Cascade)
+  mk           MataKuliah    @relation(fields: [mkId], references: [id], onDelete: Cascade)
+
+  @@unique([plId, mkId])
+}
+
+model PemetaanSnDiktiCPLProdi {
+  id           String   @id @default(uuid())
+  snDiktiId    String
+  cplId        String
+
+  snDikti      CPLSnDikti @relation(fields: [snDiktiId], references: [id], onDelete: Cascade)
+  cpl          CPL        @relation(fields: [cplId], references: [id], onDelete: Cascade)
+
+  @@unique([snDiktiId, cplId])
+}
+
+model PemetaanCPLBK {
+  id           String   @id @default(uuid())
+  cplId        String
+  bkId         String
+
+  cpl          CPL         @relation(fields: [cplId], references: [id], onDelete: Cascade)
+  bk           BahanKajian @relation(fields: [bkId], references: [id], onDelete: Cascade)
+
+  @@unique([cplId, bkId])
+}
+
+model PemetaanBKMK {
+  id           String   @id @default(uuid())
+  bkId         String
+  mkId         String
+
+  bk           BahanKajian @relation(fields: [bkId], references: [id], onDelete: Cascade)
+  mk           MataKuliah  @relation(fields: [mkId], references: [id], onDelete: Cascade)
+
+  @@unique([bkId, mkId])
+}
+
+model PemetaanCPLMK {
+  id           String   @id @default(uuid())
+  cplId        String
+  mkId         String
+
+  cpl          CPL        @relation(fields: [cplId], references: [id], onDelete: Cascade)
+  mk           MataKuliah @relation(fields: [mkId], references: [id], onDelete: Cascade)
+
+  @@unique([cplId, mkId])
+}
+
+model PemetaanMKCPMK {
+  id           String   @id @default(uuid())
+  mkId         String
+  cpmkId       String
+
+  mk           MataKuliah @relation(fields: [mkId], references: [id], onDelete: Cascade)
+  cpmk         CPMK       @relation(fields: [cpmkId], references: [id], onDelete: Cascade)
+
+  @@unique([mkId, cpmkId])
+}
+
+// ------------------------------------
+// ENTITAS MODUL LAMA (Dipertahankan Sementara)
+// ------------------------------------
+model Modul {
+  id           String   @id @default(uuid())
+  kurikulumId  String
+  kode         String
+  nama         String
+  sks          Int      @default(2)
+  semester     Int      @default(1)
+  tipe         String   @default("WAJIB")
+  isPbl        Boolean  @default(false)
+  koordinator  String?
+  status       String   @default("Draft")
+
+  kurikulum    Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+  tugas        Tugas[]
+
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Tugas {
+  id          String   @id @default(uuid())
+  modulId     String
+  nama        String
+  tipe        String   @default("Formatif")
+  bobot       Float    @default(0)
+  deadline    DateTime?
+
+  modul       Modul    @relation(fields: [modulId], references: [id], onDelete: Cascade)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ------------------------------------
+// ENTITAS ACTION PLAN (LEDIK)
+// ------------------------------------
+model ActionPlan {
+  id          String   @id @default(uuid())
+  kurikulumId String
+  title       String
+  context     String
+  assignedTo  String
+  priority    String   @default("Medium")
+  status      String   @default("Draft")
+  cplId       String?  // Relasi ke CPL mana yang rendah
+  
+  kurikulum   Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+  cpl         CPL?      @relation(fields: [cplId], references: [id])
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ------------------------------------
+// FASE DO: KELAS, MAHASISWA & PENILAIAN
+// ------------------------------------
+model Mahasiswa {
+  id          String   @id @default(uuid())
+  nim         String   @unique
+  nama        String
+  angkatan    Int
+  
+  enrollments KelasEnrollment[]
+  penilaian   Penilaian[]
+  nilaiSoal   NilaiSoal[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Kelas {
+  id          String   @id @default(uuid())
+  mkId        String
+  nama        String   // e.g., "SI-44-01"
+  tahunAjaran String   // e.g., "2024/2025"
+  semester    String   // "Ganjil" / "Genap"
+  dosenId     String?
+
+  completedAt DateTime?  // Null = belum selesai, set = Do phase selesai
+
+  mk          MataKuliah @relation(fields: [mkId], references: [id], onDelete: Cascade)
+  dosen       User?      @relation(fields: [dosenId], references: [id], onDelete: SetNull)
+  enrollments KelasEnrollment[]
+  penilaian   Penilaian[]
+  asesmen     Asesmen[]
+  rpsPertemuan RPSPertemuan[]
+  rubrik      Rubrik[]
+  materi      MateriPembelajaran[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Asesmen {
+  id          String   @id @default(uuid())
+  kelasId     String
+  nama        String   // e.g. "UTS", "Tugas 1"
+  bobot       Float    // Bobot asesmen thd total MK (%)
+
+  kelas       Kelas    @relation(fields: [kelasId], references: [id], onDelete: Cascade)
+  soal        AsesmenSoal[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model AsesmenSoal {
+  id          String   @id @default(uuid())
+  asesmenId   String
+  nomorSoal   String   // e.g. "Soal 1"
+  bobotSoal   Float    // Bobot soal dlm asesmen ini
+  subCpmkId   String
+
+  asesmen     Asesmen  @relation(fields: [asesmenId], references: [id], onDelete: Cascade)
+  subCpmk     SubCPMK  @relation(fields: [subCpmkId], references: [id], onDelete: Cascade)
+  nilai       NilaiSoal[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model NilaiSoal {
+  id            String   @id @default(uuid())
+  mahasiswaId   String
+  asesmenSoalId String
+  nilai         Float    @default(0) // 0-100
+
+  mahasiswa     Mahasiswa   @relation(fields: [mahasiswaId], references: [id], onDelete: Cascade)
+  asesmenSoal   AsesmenSoal @relation(fields: [asesmenSoalId], references: [id], onDelete: Cascade)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@unique([mahasiswaId, asesmenSoalId])
+}
+
+model KelasEnrollment {
+  id          String   @id @default(uuid())
+  kelasId     String
+  mahasiswaId String
+
+  kelas       Kelas     @relation(fields: [kelasId], references: [id], onDelete: Cascade)
+  mahasiswa   Mahasiswa @relation(fields: [mahasiswaId], references: [id], onDelete: Cascade)
+
+  @@unique([kelasId, mahasiswaId])
+}
+
+model Penilaian {
+  id          String   @id @default(uuid())
+  mahasiswaId String
+  kelasId     String
+  subCpmkId   String
+  nilai       Float    @default(0) // Range 0-100
+
+  mahasiswa   Mahasiswa @relation(fields: [mahasiswaId], references: [id], onDelete: Cascade)
+  kelas       Kelas     @relation(fields: [kelasId], references: [id], onDelete: Cascade)
+  subCpmk     SubCPMK   @relation(fields: [subCpmkId], references: [id], onDelete: Cascade)
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([mahasiswaId, kelasId, subCpmkId])
+}
+
+// ------------------------------------
+// FASE DO: DOKUMEN RPS & RUBRIK
+// ------------------------------------
+model RPSPertemuan {
+  id          String   @id @default(uuid())
+  kelasId     String
+  mingguKe    Int
+  materi      String   @db.Text
+  metode      String
+  waktu       String
+  subCpmkId   String?  // Terkait Sub-CPMK mana pertemuan ini
+  
+  kelas       Kelas    @relation(fields: [kelasId], references: [id], onDelete: Cascade)
+  subCpmk     SubCPMK? @relation(fields: [subCpmkId], references: [id], onDelete: SetNull)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Rubrik {
+  id          String   @id @default(uuid())
+  kelasId     String
+  nama        String
+  deskripsi   String?  @db.Text
+  
+  kriteria    KriteriaRubrik[]
+  kelas       Kelas    @relation(fields: [kelasId], references: [id], onDelete: Cascade)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model KriteriaRubrik {
+  id          String   @id @default(uuid())
+  rubrikId    String
+  aspek       String   // e.g. "Kognitif", "Presentasi"
+  bobot       Float    // e.g. 30%
+  sangatBaik  String   @db.Text // Deskripsi untuk nilai 81-100
+  baik        String   @db.Text // Deskripsi untuk nilai 61-80
+  cukup       String   @db.Text // Deskripsi untuk nilai 41-60
+  kurang      String   @db.Text // Deskripsi untuk nilai < 40
+
+  rubrik      Rubrik   @relation(fields: [rubrikId], references: [id], onDelete: Cascade)
+}
+
+// ------------------------------------
+// NOTIFIKASI
+// ------------------------------------
+model Notification {
+  id          String   @id @default(uuid())
+  userId      String   // Penerima notifikasi
+  title       String
+  message     String   @db.Text
+  type        String   @default("INFO") // INFO, WARNING, SUCCESS
+  isRead      Boolean  @default(false)
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ------------------------------------
+// REFERENSI DOKUMEN
+// ------------------------------------
+model Referensi {
+  id          String   @id @default(uuid())
+  kurikulumId String
+  nama        String
+  kategori    String   @default("Internal") // Internal, External
+  tipe        String   @default("PDF")      // PDF, Excel, Word, URL
+  fileUrl     String?
+  fileSize    Int?     // in bytes
+  status      String   @default("Draft")    // Draft, Published, Archived
+  uploadedBy  String?
+
+  kurikulum   Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+// ------------------------------------
+// MATERI PEMBELAJARAN
+// ------------------------------------
+model MateriPembelajaran {
+  id        String   @id @default(uuid())
+  kelasId   String
+  nama      String
+  tipe      String   @default("Dokumen") // Dokumen, Video, Tautan
+  fileUrl   String?
+  fileSize  Int?     // in bytes
+
+  kelas     Kelas    @relation(fields: [kelasId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ------------------------------------
+// SYSTEM SETTINGS
+// ------------------------------------
+model SystemSetting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String   @db.Text
+  category  String   @default("general") // general, obe, notification
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ------------------------------------
+// CHECK FEEDBACK & REKOMENDASI
+// ------------------------------------
+model CheckFeedback {
+  id            String   @id @default(uuid())
+  kurikulumId   String
+  tipe          String   // 'catatan' | 'rekomendasi'
+  isi           String   @db.Text
+  sumber        String?  // 'Kaprodi' | 'Industri' | 'Alumni' | 'Mahasiswa' | 'Dosen'
+  prioritas     String?  @default("Medium") // 'High' | 'Medium' | 'Low'
+
+  kurikulum     Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// ------------------------------------
+// DOKUMENTASI KEGIATAN KURIKULUM
+// ------------------------------------
+model DokumentasiKegiatan {
+  id            String   @id @default(uuid())
+  kurikulumId   String
+  judul         String
+  kategori      String   // 'Rapat Kurikulum' | 'Workshop' | 'FGD' | 'Evaluasi Eksternal' | 'Revisi Dokumen' | 'Seminar' | 'Kunjungan Industri' | 'Monitoring Internal' | 'Lain-lain'
+  deskripsi     String   @db.Text
+  tanggal       DateTime
+  peserta       String?  @db.Text
+  lokasi        String?
+  hasil         String?  @db.Text
+  tindakLanjut  String?  @db.Text
+  lampiran      String?  @db.Text // JSON array of file paths
+
+  kurikulum     Kurikulum @relation(fields: [kurikulumId], references: [id], onDelete: Cascade)
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}

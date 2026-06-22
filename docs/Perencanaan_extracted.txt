@@ -1,0 +1,24 @@
+BAGAIMANA MENGELOLA PROYEK  KONSEP UTAMA  WORKING CYCLE  KONSEP TAMBAHAN  ▪   Terdapat   2   konsep   utama   pada   tahapan   Getting the Work Done ,   yaitu   Sprint dan Backlog  ▪   Detail   konsep   adalah   sebagai   berikut :
+
+BAGAIMANA MENGELOLA PROYEK   -  SPRINT  ▪   Pendekatan   Manajemen   Proyek   adalah   Agile   → iterative  ▪   Working cycles   dalam   agile methodology   disebut   SPRINT   atau   iterasi  ▪   Biasanya   menggunakan   siklus   pendek   (1   -   4   minggu )  ▪   Di akhir   setiap siklus, Anda akan   mengirimkan produk yang diperbarui dan berfungsi  Sprint Planning  Daily Scrum  Sprint Review  Sprint Retrospective
+
+BAGAIMANA MENGELOLA PROYEK   -  BACKLOG  ▪   A   product   backlog   is   a   list   of   all   the   work   that   needs   to   be   done .  ▪   The   backlog   items   will   guide   the   creation   of   the   project’s   deliverables .  ▪   It   can   be   displayed   on   a   wall   using   sticky   notes   or   managed   digitally   with   software .  Fungsi   utama   produk   akhir .  Suatu   cara   untuk   memecah   fitur   menjadi   bagian - bagian  pekerjaan   yang   lebih   kecil   berupa   serangkaian   fitur   yang  logis  pernyataan   kebutuhan   yang   menjelaskan   siapa  membutuhkan   apa ,   dan   mengapa .  Unit   kerja   individual   yang   harus   dilaksanakan .
+
+PERSIAPAN SEBELUM  EKSEKUSI SPRINT   -  Create Your Sprint  Schedule  ▪   Berapa   minggu   siklus   setiap   sprint?  ▪   Hari   kerja   mulai   apa   sampai   apa ?  ▪   Kapan   jadwal   sprint planning?  ▪   Kapan   jadwal   daily scrum?  ▪   Kapan   jadwal   sprint review?  ▪   Kapan   jadwal   sprint retrospective?
+
+PERSIAPAN SEBELUM EKSEKUSI  SPRINT   -   Create Your Backlog  ▪   Ingat   Kembali   apa   product vision (product objective)  ▪   Mulai   dengan   mengidentifikasi   feature   dan   epic  ▪   Penting   untuk   diingat   bahwa   untuk   setiap   feature, epic, user  stories, dan task   harus   memiliki   kriteria   penerimaan .  ▪   Kriteria   penerimaan   adalah   serangkaian   pernyataan , masing -  masing   dengan   hasil   lulus/ gagal   yang   jelas   yang   menentukan  apakah   tugas   telah   diselesaikan   dengan   benar   atau   tidak .
+
+PERSIAPAN  SEBELUM  EKSEKUSI  SPRINT   -  Create Your  Backlog
+
+PERSIAPAN  SEBELUM EKSEKUSI  SPRINT   -   Create  User Stories  ▪   Kisah   pengguna   adalah   alat   yang  digunakan   dalam   pengembangan  perangkat   lunak   tangkas   untuk  menangkap   deskripsi   fitur  perangkat   lunak   dari   perspektif  pengguna   akhir .  ▪   Kisah   pengguna   menjelaskan   tipe  pengguna ,   apa   yang   mereka  inginkan , dan   alasannya .
+
+CONTOH USER  STORIES
+
+
+
+LET'S START THE SPRINT  https://kickoff.pmi.org/app/agile - getting - the - work - done/agile - the - sprint - planning - meeting
+
+RINGKASAN  PERSIAPAN SPRINT  1.   Buat sprint schedule  2.   Buat backlog  3.   Buat user stories  EKSEKUSI SETIAP  SPRINT  1.   Sprint Planning  2.   Daily scrum  3.   Sprint review  4.   Sprint retrospective  Meeting   bersama   tim ,   memecah  user stories   menjadi   task dan   diberi  story point  Daily coordination meeting (10 - 15  menit )  Tim demo   produk ,   menunjukkan  hasil   dari   sprint  Private meeting, Dimana   tim   bisa  dengan   terbuka   menyampaikan  struggle dan paint point  Luaran   yang   dikumpulkan   Rabu, 3 Juni 2026,   meliputi :  1.   Eksekusi   persiapan   sprint  2.   Hasil sprint planning, daily scrum  3.   Buat   persiapan   sprint review  4.   Buat   persiapan   sprint retrospective
+
+TERIMA KASIH  Semoga   Bermanfaat   ☺
+

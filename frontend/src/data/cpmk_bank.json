@@ -1,0 +1,166 @@
+[
+  {
+    "kode": "CPMK01",
+    "deskripsi": "Mampu memahami konsep dasar UI/UX"
+  },
+  {
+    "kode": "CPMK02",
+    "deskripsi": "Mampu memahami teori desain dalam user interface"
+  },
+  {
+    "kode": "CPMK03",
+    "deskripsi": "Mampu memahami tentang gaya interaksi dalam user interface"
+  },
+  {
+    "kode": "CPMK04",
+    "deskripsi": "Mampu menerapkan konsep tipografi dan pewarnaan dalam user interface"
+  },
+  {
+    "kode": "CPMK05",
+    "deskripsi": "Mampu menerapkan konsep dan jenis prototyping dalam user interface"
+  },
+  {
+    "kode": "CPMK06",
+    "deskripsi": "Mampu menerapkan konsep usability testing dalam melakukan pengukuran user interface"
+  },
+  {
+    "kode": "CPMK07",
+    "deskripsi": "Mampu menerapkan konsep desain thinking dalam menyusun user interface dan mengukur user experience pengguna"
+  },
+  {
+    "kode": "CPMK011",
+    "deskripsi": "Mampu memahami konsep dasar sistem informasi"
+  },
+  {
+    "kode": "CPMK012",
+    "deskripsi": "Mampu menilai peran sistem informasi dalam memberikan rekomendasi pengambilan keputusan di organisasi"
+  },
+  {
+    "kode": "CPMK021",
+    "deskripsi": "Mampu merancang dan menggunakan database"
+  },
+  {
+    "kode": "CPMK022",
+    "deskripsi": "Mampu mengolah dan menganalisa data dengan alat dan teknik pengolahan data"
+  },
+  {
+    "kode": "CPMK031",
+    "deskripsi": "Mampu memahami dan menggunakan berbagai metodologi pengembangan sistem"
+  },
+  {
+    "kode": "CPMK032",
+    "deskripsi": "Mampu menggunakan berbagai alat pemodelan sistem"
+  },
+  {
+    "kode": "CPMK033",
+    "deskripsi": "Mampu menganalisa kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi"
+  },
+  {
+    "kode": "CPMK041",
+    "deskripsi": "Mampu membuat perencanaan infrastruktur TI, arsitektur jaringan, layanan fisik dan cloud"
+  },
+  {
+    "kode": "CPMK042",
+    "deskripsi": "Mampu menganalisa konsep identifikasi, otentikasi, otorisasi akses dalam konteks melindungi orang dan perangkat"
+  },
+  {
+    "kode": "CPMK051",
+    "deskripsi": "Mampu memahami kode etik dalam penggunaan informasi dan data pada perancangan, implementasi, dan penggunaan suatu sistem"
+  },
+  {
+    "kode": "CPMK052",
+    "deskripsi": "Mampu menerapkan kode etik dalam penggunaan informasi dan data pada perancangan, implementasi, dan penggunaan suatu sistem"
+  },
+  {
+    "kode": "CPMK061",
+    "deskripsi": "Mampu merencanakan sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi jangka pendek maupun jangka panjang."
+  },
+  {
+    "kode": "CPMK062",
+    "deskripsi": "Mampu menerapkan sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi jangka pendek maupun jangka panjang."
+  },
+  {
+    "kode": "CPMK063",
+    "deskripsi": "Mampu memelihara sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi jangka pendek maupun jangka panjang."
+  },
+  {
+    "kode": "CPMK064",
+    "deskripsi": "Mampu meningkatkan sistem informasi organisasi untuk mencapai tujuan dan sasaran organisasi jangka pendek maupun jangka panjang."
+  },
+  {
+    "kode": "CPMK071",
+    "deskripsi": "Mampu memahami konsep, teknik dan metodologi manajemen proyek sistem informasi."
+  },
+  {
+    "kode": "CPMK072",
+    "deskripsi": "Mampu mengidentifikasi konsep, teknik dan metodologi manajemen proyek sistem informasi."
+  },
+  {
+    "kode": "CPMK073",
+    "deskripsi": "Mampu menerapkan konsep, teknik dan metodologi manajemen proyek sistem informasi."
+  },
+  {
+    "kode": "CPMK081",
+    "deskripsi": "Mampu memahami konsep, metode, teknik, dan tahapan data mining serta visualisasi data dalam pengolahan data, pengorganisasian data, dan penyajian informasi yang efektif, efisien, dan estetik"
+  },
+  {
+    "kode": "CPMK082",
+    "deskripsi": "Mampu menerapkan konsep, metode, teknik, dan tahapan data mining serta visualisasi data dalam pengolahan data, pengorganisasian data, dan penyajian informasi yang efektif, efisien, dan estetik"
+  },
+  {
+    "kode": "CPMK091",
+    "deskripsi": "Mampu memahami model sistem, metode dan berbagai teknik peningkatan bisnis proses, peluang inovasi digital dalam pengelolaan bisnis bidang kesehatan yang memanfaatkan teknologi  M15 M16 M17 M25 M26"
+  },
+  {
+    "kode": "CPMK91",
+    "deskripsi": "Mampu memahami model sistem, metode dan berbagai teknik peningkatan bisnis proses, peluang inovasi digital dalam pengelolaan bisnis bidang kesehatan yang memanfaatkan teknologi"
+  },
+  {
+    "kode": "CPMK092",
+    "deskripsi": "Mampu menerapkan model sistem, metode dan berbagai teknik peningkatan bisnis proses, peluang inovasi digital dalam pengelolaan bisnis bidang kesehatan yang memanfaatkan teknologi"
+  },
+  {
+    "kode": "CPMK101",
+    "deskripsi": "Mampu menunjukkan sikap berjati diri islami berlandaskan nilai ahlus sunah waljamahah"
+  },
+  {
+    "kode": "CPMK102",
+    "deskripsi": "Mampu menunjukkan sikap profesionalitas, integritas, yang dilengkapi dengan kemampuan komunikasi, kepemimpinan, bekerja sama dan bertanggung jawab atas pekerjaan di bidang keahliannya, bermasyarakat, berbangsa, dan bernegara sebagai warga negara yang bangga dan cinta tanah air berlandaskan nilai ahlus sunah waljamahah"
+  },
+  {
+    "kode": "CPMK111",
+    "deskripsi": "Mampu menunjukkan sikap taat hukum dan disiplin melalui internalisasi nilai, norma, etika akademik, semangat kemandirian, kejuangan, dan kewirausahaan"
+  },
+  {
+    "kode": "CPMK112",
+    "deskripsi": "Mampu menunjukkan sikap menghargai keanekaragaman melalui internalisasi nilai, norma, etika akademik, semangat kemandirian, kejuangan, dan kewirausahaan"
+  },
+  {
+    "kode": "CPMK121",
+    "deskripsi": "Mampu menunjukkan kinerja mandiri, bermutu, dan terukur   dalam mengembangkan ilmu pengetahuan yang memperhatikan nilai humaniora sesuai bidang keahliannya"
+  },
+  {
+    "kode": "CPMK122",
+    "deskripsi": "Mampu berfikir logis, kritis kinerja sistematis, dan inovatif, komunikatif dalam mengembangkan ilmu pengetahuan yang memperhatikan nilai humaniora sesuai bidang keahliannya"
+  },
+  {
+    "kode": "CPMK131",
+    "deskripsi": "Mampu mengkaji implikasi pengembangan ilmu pengetahuan dengan menerapkan keahliannya dalam rangka menghasilkan solusi"
+  },
+  {
+    "kode": "CPMK132",
+    "deskripsi": "Mampu menyusun deskripsi saintifik hasil kajian dalam bentuk laporan ilmiah yang sahih dan original"
+  },
+  {
+    "kode": "CPMK133",
+    "deskripsi": "Mampu memelihara serta mengembangan jaringan kerja dengan pembimbing, kolega, sejawat baik di dalam maupun di luar lembaga"
+  },
+  {
+    "kode": "CPMK141",
+    "deskripsi": "Mampu melakukan evaluasi diri terhadap penyelesaian pekerjaan sebagai wujud tanggung jawab atas pencapaian hasil kelompok kerja"
+  },
+  {
+    "kode": "CPMK142",
+    "deskripsi": "Mampu melakukan supervisi terhadap penyelesaian pekerjaan sebagai wujud tanggung jawab atas pencapaian hasil kelompok kerja"
+  }
+]

@@ -1,0 +1,613 @@
+Warning: Setting up fake worker.
+
+--- PAGE 8 ---
+[3.88]BK  [15.68]Capaian Pembelajaran Lulusan (CPL)  [5.83]CPL01  [7.90]CPL02  [9.97]CPL03  [12.03]CPL04  [14.10]CPL05  [16.17]CPL06  [18.24]CPL07  [20.30]CPL08  [22.37]CPL09  [24.44]CPL10  [26.50]CPL11  [28.57]CPL12  [30.79]CPL13  [33.05]CPL14  
+[3.65]BK01  [6.47]v  [8.54]v  [14.74]v  [18.88]v  [23.01]v  
+[3.65]BK02  [8.54]v  [20.94]v  
+[3.65]BK03  [12.67]v  
+[3.65]BK04  [18.88]v  
+[3.65]BK05  [10.61]v  
+[3.65]BK06  [16.81]v  
+[3.65]BK07  [10.61]v  
+[3.65]BK08  [12.67]v  
+[3.65]BK09  [14.74]v  [25.08]v  [27.14]v  
+[3.65]BK10  [8.54]v  [18.88]v  [29.21]v  [31.47]v  [33.69]v  
+[3.65]BK11  [8.54]v  [20.94]v  
+[3.65]BK12  [20.94]v  
+[3.65]BK13  [14.74]v  [25.08]v  [27.14]v  [29.21]v  [31.47]v  [33.69]v  
+[3.65]BK14  [23.01]v  
+[3.65]BK15  [12.67]v  [16.81]v  
+[3.65]BK16  [10.61]v  
+[3.65]BK17  [23.01]v  
+[3.65]BK18  [20.94]v  
+[3.65]BK19  [10.61]v  
+[3.65]BK20  [10.61]v  
+[3.65]BK21  [10.61]v  
+
+--- PAGE 9 ---
+[3.06]No  [3.79]Kode   [3.93]MK  [6.51]Nama MK  [9.65]BK01  [10.45]BK02  [11.24]BK03  [12.04]BK04  [12.84]BK05  [13.63]BK06  [14.43]BK07  [15.23]BK08  [16.02]BK09  [16.68]Bahan Kajian (BK)  
+[3.17]1  [3.17]2  [3.82]MK01  [4.71]AGAMA  [16.22]v  [16.87]BK10  [17.71]BK11  [18.54]BK12  [19.46]BK13  [19.67]v  [20.29]BK14  [21.02]BK15  [21.74]BK16  [22.47]BK17  [23.20]BK18  [23.92]BK19  [24.65]BK20  [25.38]BK21  
+[3.17]3  [3.82]MK02  [3.17]4  [3.82]MK03  [4.71]PANCASILA  [4.71]BAHASA INDONESIA  [16.22]v  [19.67]v  
+[3.17]5  [3.82]MK04  [3.82]MK05  [4.71]PENGANTAR SISTEM INFORMASI  [4.71]ALGORITMA DAN PEMROGRAMAN  [9.84]v  
+[19.67]v  
+[3.17]6  [3.17]7  [3.82]MK06  [3.82]MK07  [4.71]LITERASI TIK  [4.71]MATEMATIKA DISKRIT  [9.84]v  [11.44]v  [14.62]v  
+[3.17]8  [3.82]MK08  [4.71]ASWAJA  [17.92]v  
+[3.10]10  [3.17]9  [3.82]MK09  [3.82]MK10  [4.71]KEWARGANEGARAAN  
+[19.67]v  
+[3.10]11  [3.82]MK11  [4.71]LOGIKA DAN METODE BERFIKIR KRITIS  [3.10]12  [3.82]MK12  [4.71]MANAJEMEN DATA  [4.71]STRUKTUR DATA  [10.64]v  [17.92]v  
+[19.67]v  
+[3.10]13  [3.82]MK13  [14.62]v  
+[17.92]v  
+[3.10]14  [3.10]15  [3.82]MK14  [4.71]SISTEM OPERASI  [4.71]PENGANTAR MANAJEMEN  [11.44]v  [3.82]MK15  [4.71]MANAJEMEN PROSES BISNIS  [13.83]v  
+[3.10]16  [3.10]17  [3.82]MK16  [4.71]KEWIRAUSAHAAN  [20.49]v  
+[3.10]18  [3.82]MK17  [3.82]MK18  [4.71]PENGANTAR AKUNTANSI  [3.82]MK19  [4.71]PEMROGRAMAN BERORIENTASI OBJEK  [13.83]v  
+[22.66]v  
+[3.10]19  [4.71]ANALISIS DAN PERANCANGAN SISTEM   [13.03]v  [14.62]v  [24.12]v  [3.10]20  
+[3.10]21  [3.82]MK20  [3.82]MK21  [4.71]INFORMASI  [4.71]DESAIN UI/UX  [3.10]22  [3.82]MK22  [4.71]SISTEM DAN MANAJEMEN BASIS DATA  [10.64]v  [13.03]v  [21.94]v  
+[3.10]23  [3.10]24  [3.82]MK23  [4.71]PEMROGRAMAN WEB  [3.82]MK24  [4.71]MANAJEMEN PROYEK SISTEM INFORMASI  [12.23]v  [14.62]v  [24.84]v  
+[3.10]25  [3.82]MK25  [4.71]DATA SCIENCE  [4.71]SISTEM ENTERPRISE  [10.64]v  [17.92]v  [18.75]v  [3.10]26  
+[3.10]27  [3.82]MK26  [4.71]RINTISAN BISNIS DIGITAL  
+[20.49]v  [21.21]v  
+[3.82]MK27  [4.71]DESAIN DAN MANAJEMEN JARINGAN   [22.66]v  [3.10]28  
+[3.10]29  [3.82]MK28  [3.82]MK29  [4.71]KOMPUTER  [4.71]RISET OPERASI  
+[11.44]v  
+[3.10]30  [3.10]31  [3.82]MK30  [4.71]PENGUJIAN PERANGKAT LUNAK  [4.71]MANAJEMEN INVESTASI TI  [13.83]v  [14.62]v  
+[17.92]v  
+[3.10]32  [3.82]MK31  [3.82]MK32  [4.71]PROTEKSI ASET INFORMASI  [3.10]33  [3.82]MK33  [4.71]DATA WAREHOUSE DAN DATA MINING  [10.64]v  [15.42]v  
+[3.10]34  [3.82]MK34  [4.71]TATA KELOLA TI  [3.82]MK35  [4.71]CAPSTONE PROJECT  [13.03]v  [13.83]v  
+[18.75]v  [23.39]v  
+[3.10]35  [4.71]STATISTIK  [12.23]v  [14.62]v  [17.09]v  [3.10]36  [3.82]MK36  [4.71]BAHASA INGGRIS  [17.92]v  [21.94]v  [24.84]v  
+[3.10]37  [3.10]38  [3.82]MK37  
+[3.10]39  [3.82]MK38  
+[4.71]PERENCANAAN STRATEGIS SI/TI  
+[3.82]MK39  [4.71]MANAJEMEN LAYANAN TI  
+[13.83]v  [19.67]v  
+[4.71]ETIKA PROFESI  [13.83]v  [3.10]40  [3.82]MK40  [4.71]MAGANG  [16.22]v  
+[3.10]41  [3.10]42  [3.82]MK41  [4.71]METODOLOGI PENELITIAN  [16.22]v  [17.09]v  
+[3.10]43  [3.82]MK42  [4.71]KETERAMPILAN INTERPERSONAL  
+[17.09]v  
+[3.10]44  [3.82]MK43  [3.82]MK44  [4.71]KULIAH KERJA NYATA  [3.10]45  [3.82]MK45  [4.71]TUGAS AKHIR  [16.22]v  [16.22]v  [17.09]v  
+[19.67]v  
+[3.10]46  [3.82]MK46  [4.71]TEKNOLOGI DAN MASYARAKAT  [16.22]v  
+[17.09]v  
+[3.10]47  [3.82]MK47  [4.71]KULIAH LAPANGAN  [3.10]48  [3.82]MK48  [4.71]PEMROGRAMAN MOBILE  [14.36]v  [16.22]v  
+[17.09]v  
+[25.34]v  
+[3.10]49  [3.82]MK49  [4.71]INTERNET UNTUK SEGALA  [4.71]TEKNOLOGI PEMROGRAMAN  [11.17]v  [14.36]v  [3.10]50  [3.82]MK50  [4.71]ARSITEKTUR TEKNOLOGI  [14.36]v  [15.16]v  
+[3.10]51  [3.10]52  [3.82]MK51  [3.82]MK52  [4.71]KOMPUTASI AWAN  [4.71]MANAJEMEN RISIKO TI  [11.17]v  
+[4.71]MANAJEMEN PERUBAHAN  [13.56]v  
+[15.16]v  [20.98]v  
+[3.10]53  [3.10]54  [3.82]MK53  [4.71]PENGUKURAN KINERJA TI  [13.56]v  [15.16]v  
+[3.10]55  [3.82]MK54  [3.10]56  [3.82]MK55  [4.71]MANAJEMEN KEBERLANGSUNGAN BISNIS  [13.56]v  
+[3.10]57  [3.82]MK56  [4.71]AUDIT SISTEM INFORMASI  
+[13.56]v  
+[3.82]MK57  [13.56]v  [3.10]58  
+[3.10]59  [3.82]MK58  
+[4.71]SISTEM PENDUKUNG KEPUTUSAN  
+[3.82]MK59  [4.71]VISUALISASI INFORMASI  
+[14.36]v  [18.41]v  
+[3.10]60  [3.82]MK60  [4.71]SISTEM CERDAS  [4.71]TEKNIK PERAMALAN  [14.36]v  [18.41]v  
+[23.16]v  
+[3.10]61  [3.82]MK61  [4.71]PENGOLAHAN CITRA  [18.41]v  [3.10]62  
+[3.10]63  [3.82]MK62  [3.82]MK63  [4.71]MANAJEMEN MEREK DIGITAL  
+[18.41]v  
+[3.10]64  [3.82]MK64  [4.71]PEMASARAN DIGITAL  
+[22.43]v  
+[3.82]MK65  [4.71]KREATIF DIGITAL  
+[22.43]v  
+[3.10]65  [3.10]66  [3.82]MK66  [4.71]MANAJEMEN HUBUNGAN PELANGGAN  [4.71]MANAJEMEN RANTAI PASOK  [20.26]v  [22.43]v  [20.26]v  
+
+--- PAGE 10 ---
+[2.96]No  [5.91]MK  
+[3.08]1  [3.48]AGAMA  [8.98]CPL01  [10.05]CPL02  [11.06]CPL03  [12.07]CPL04  [13.08]CPL05  
+[13.66]Capaian Pembelajaran Lulusan (CPL)  [14.07]CPL06  [15.02]CPL07  [15.97]CPL08  [16.90]CPL09  [17.82]CPL10  
+[3.08]2  [3.48]PANCASILA  [18.15]v  
+[18.86]CPL11  [20.07]CPL12  [21.20]CPL13  [22.26]CPL14  
+[3.08]3  [3.08]4  [3.48]BAHASA INDONESIA  [19.21]v  
+[3.08]5  [3.48]PENGANTAR SISTEM INFORMASI  [9.33]v  
+[21.53]v  
+[3.08]6  [3.48]ALGORITMA DAN PEMROGRAMAN  [3.08]7  [3.48]LITERASI TIK  [9.33]v  [11.41]v  
+[3.08]8  [3.48]MATEMATIKA DISKRIT  [3.48]ASWAJA  [10.40]v  
+[12.40]V  
+[3.08]9  [3.48]KEWARGANEGARAAN  [18.15]v  [3.00]10  
+[3.00]11  [3.48]LOGIKA DAN METODE BERFIKIR KRITIS  [3.00]12  [3.48]MANAJEMEN DATA  [10.38]V  [10.40]v  
+[18.15]v  
+[11.41]v  [16.30]v  
+[20.42]v  
+[3.00]13  [3.48]STRUKTUR DATA  [3.00]14  [3.48]SISTEM OPERASI  [12.42]v  
+[3.00]15  [3.48]PENGANTAR MANAJEMEN  [3.00]16  [3.48]MANAJEMEN PROSES BISNIS  [14.40]v  [3.48]KEWIRAUSAHAAN  [17.25]v  
+[3.00]17  [3.48]PENGANTAR AKUNTANSI  [17.25]v  
+[3.00]19  [3.48]PEMROGRAMAN BERORIENTASI OBJEK  [3.48]ANALISIS DAN PERANCANGAN SISTEM   [11.41]v  
+[17.25]v  [19.20]V  [3.00]18  
+[3.00]20  [3.48]INFORMASI  [3.48]DESAIN UI/UX  [11.41]v  [3.00]21  
+[3.00]22  [3.48]SISTEM DAN MANAJEMEN BASIS DATA  [10.40]v  
+[11.41]v  
+[3.00]23  [3.48]PEMROGRAMAN WEB  [3.48]MANAJEMEN PROYEK SISTEM INFORMASI  [11.41]v  [3.00]24  [3.48]DATA SCIENCE  [15.35]v  
+[3.00]25  [3.48]SISTEM ENTERPRISE  [16.30]v  [3.00]26  [3.48]RINTISAN BISNIS DIGITAL  [17.25]v  
+[3.00]27  [3.48]DESAIN DAN MANAJEMEN JARINGAN   [12.42]v  [17.25]v  [3.00]28  [3.48]KOMPUTER  
+[3.00]29  [3.48]RISET OPERASI  [3.00]30  [3.48]PENGUJIAN PERANGKAT LUNAK  [11.41]v  [16.30]v  
+[3.00]31  [3.48]MANAJEMEN INVESTASI TI  [3.00]32  [3.48]PROTEKSI ASET INFORMASI  [12.42]v  [14.40]v  
+[3.00]33  [3.48]DATA WAREHOUSE DAN DATA MINING  [16.30]v  [3.00]34  [3.48]TATA KELOLA TI  
+[3.00]35  [3.48]CAPSTONE PROJECT  [11.41]v  
+[14.40]v  
+[3.48]STATISTIK  [15.35]v  [3.00]36  
+[3.00]37  [3.48]BAHASA INGGRIS  
+[16.30]v  
+[3.00]38  [3.48]PERENCANAAN STRATEGIS SI/TI  [3.00]39  [3.48]MANAJEMEN LAYANAN TI  [14.40]v  
+[21.53]V  
+[3.00]40  [3.48]ETIKA PROFESI  [3.48]MAGANG  [13.43]v  
+[14.40]v  
+[3.00]41  [3.48]METODOLOGI PENELITIAN  [13.43]v  [15.35]v  [20.42]v  [21.53]v  [3.00]42  
+[3.00]43  [3.48]KETERAMPILAN INTERPERSONAL  [3.00]44  [3.48]KULIAH KERJA NYATA  [13.43]v  [15.35]v  [18.15]v  
+[21.53]v  [22.59]v  
+[3.48]TUGAS AKHIR  [13.43]v  
+[3.00]46  [3.48]TEKNOLOGI DAN MASYARAKAT  
+[13.43]v  [15.35]v  [20.42]v  [13.43]v  [15.35]v  [20.42]v  [21.53]v  [3.00]45  [21.53]v  [22.59]v  
+[13.43]v  [21.53]v  
+[22.59]v  
+[3.00]47  [3.48]KULIAH LAPANGAN  [3.48]PEMROGRAMAN MOBILE  [21.53]v  [3.00]48  [3.48]INTERNET UNTUK SEGALA  [11.41]v  
+[3.00]49  [3.00]50  [3.48]TEKNOLOGI PEMROGRAMAN  [3.48]ARSITEKTUR TEKNOLOGI  [11.41]v  [12.42]v  
+[3.00]51  [3.00]52  [3.48]KOMPUTASI AWAN  [12.40]V  [3.48]MANAJEMEN RISIKO TI  [12.42]v  
+[3.00]53  [3.48]MANAJEMEN PERUBAHAN  [14.40]v  [3.00]54  [3.48]PENGUKURAN KINERJA TI  [14.40]v  
+[3.00]55  [3.00]56  [3.48]MANAJEMEN KEBERLANGSUNGAN BISNIS  [14.40]v  
+[3.00]57  [3.48]AUDIT SISTEM INFORMASI  
+[14.40]v  
+[3.48]SISTEM PENDUKUNG KEPUTUSAN  [14.40]v  [3.00]58  [3.48]VISUALISASI INFORMASI  [16.30]v  
+[3.00]59  [3.48]SISTEM CERDAS  [16.30]v  [3.00]60  [3.48]TEKNIK PERAMALAN  [16.30]v  
+[3.00]61  [3.48]PENGOLAHAN CITRA  [16.30]v  [3.00]62  [3.48]MANAJEMEN MEREK DIGITAL  [16.30]v  
+[3.00]63  [3.00]64  [3.48]PEMASARAN DIGITAL  [17.25]v  
+[3.00]65  [3.48]KREATIF DIGITAL  
+[17.25]v  
+[3.00]66  [3.48]MANAJEMEN HUBUNGAN PELANGGAN  
+[17.25]v  
+[3.48]MANAJEMEN RANTAI PASOK  [17.25]v  [17.25]v  
+
+--- PAGE 11 ---
+[3.02]10. Contoh Pemetaan CPL-BK-MK  
+[4.13]`  [5.89]CPL01  [7.96]CPL02  [10.03]CPL03  [12.09]CPL04  [14.16]CPL05  [16.23]CPL06  [18.30]CPL07  [20.37]CPL08  [22.44]CPL09  [24.51]CPL10  [26.57]CPL11  [28.68]CPL12  [30.83]CPL13  [32.97]CPL14  
+[3.59]BK01  [6.08]MK04  [6.08]MK06  
+[3.59]BK02  [8.15]MK11  [20.56]MK24  [8.15]MK21  [20.56]MK32  
+[12.29]MK06  
+[12.29]MK13  
+[3.59]BK03  [12.29]MK27  
+[12.29]MK48  
+[12.29]MK51  
+[3.59]BK04  [18.49]MK23  
+[3.59]BK05  [10.22]MK19  [10.22]MK20  
+[16.42]MK14  
+[16.42]MK30  
+[16.42]MK33  
+[16.42]MK37  
+[3.59]BK06  [16.42]MK38  [16.42]MK52  [22.63]MK17  
+[16.42]MK53  
+[16.42]MK54  
+[16.42]MK55  
+[16.42]MK56  
+[10.22]MK05  
+[10.22]MK12  
+[10.22]MK18  
+[3.59]BK07  [10.22]MK22  [12.29]MK48  [20.56]MK57  
+[10.22]MK29  [20.56]MK59  
+[10.22]MK47  
+[10.22]MK49  
+[3.59]BK08  [12.29]MK31  [12.29]MK48  [16.42]MK52  
+[14.35]MK39  
+[3.59]BK09  [14.35]MK40  [18.49]MK40  
+[24.70]MK01  
+[14.35]MK43  [18.49]MK43  [24.70]MK02  [26.77]MK02  
+[30.71]MK40  
+[14.35]MK46  [24.70]MK09  
+[28.57]MK40  [30.71]MK43  [32.82]MK40  
+[28.57]MK43  [30.71]MK46  [32.82]MK43  
+[14.35]MK40  [18.49]MK34  [30.71]MK40  [18.49]MK40  
+[3.59]BK10  [10.22]MK34  [14.35]MK43  
+[30.71]MK41  
+[14.35]MK44  [18.49]MK43  [28.57]MK40  [30.71]MK43  [32.82]MK40  
+[14.35]MK45  [18.49]MK44  [28.57]MK43  [30.71]MK44  [32.82]MK43  [18.49]MK45  [28.57]MK44  [30.71]MK45  [32.82]MK44  
+[20.56]MK11  
+[3.59]BK11  [8.15]MK07  [20.56]MK24  [8.15]MK10  [20.56]MK28  
+[20.56]MK35  [28.57]MK10  
+[20.56]MK24  
+[20.56]MK32  
+[3.59]BK12  [20.56]MK57  [20.56]MK59  
+[20.56]MK60  
+[20.56]MK61  
+[24.70]MK01  
+[3.59]BK13  [14.35]MK42  [24.70]MK08  [24.70]MK09  [26.77]MK02  [30.71]MK03  
+[24.70]MK42  [30.71]MK36  
+[22.63]MK15  
+[3.59]BK14  [22.63]MK25  [22.63]MK65  
+[22.63]MK66  
+[3.59]BK15  [12.29]MK50  [22.63]MK25  
+[3.59]BK16  [10.22]MK20  
+[22.63]MK16  
+[22.63]MK26  
+[3.59]BK17  [10.22]MK18  [22.63]MK62  [26.77]MK16  
+[22.63]MK63  
+[22.63]MK64  
+
+--- PAGE 19 ---
+[3.24]MK  [5.92]Nama MK  [9.51]CPL01  [11.14]CPL02  [12.42]Capaian Pembelajaran Lulusan (CPL)  
+[3.13]MK01  [4.13]AGAMA  [12.80]CPL03  [14.54]CPL04  [16.24]CPL05  [17.92]CPL06  [19.60]CPL07  [21.49]CPL08  [23.42]CPL09  [24.80]CPMK101  [25.14]CPL10  [26.80]CPL11  [28.48]CPL12  [30.24]CPL13  [32.00]CPL14  [33.64]CPL15  [3.13]MK02  
+[3.13]MK03  [4.13]PANCASILA  [4.13]BAHASA INDONESIA  [24.80]CPMK102  [26.52]CPMK111  [3.13]MK04  [4.13]PENGANTAR SISTEM INFORMASI  [9.38]CPMK011  [29.86]CPMK132  
+[3.13]MK05  [4.13]ALGORITMA DAN PEMROGRAMAN  [9.38]CPMK012  [3.13]MK06  [4.13]LITERASI TIK  [12.67]CPMK032  
+[3.13]MK07  [4.13]MATEMATIKA DISKRIT  [9.38]CPMK011  [4.13]ASWAJA  [11.02]CPMK022  [14.41]CPMK041  [3.13]MK08  
+[3.13]MK09  [4.13]KEWARGANEGARAAN  [24.80]CPMK101  [3.13]MK10  [4.13]LOGIKA DAN METODE BERFIKIR   [11.02]CPMK022  [24.80]CPMK102  [26.52]CPMK111  
+[3.13]MK11  [4.13]KRITIS  [3.13]MK12  [4.13]MANAJEMEN DATA  [4.13]STRUKTUR DATA  [11.02]CPMK022  [20.96]CPMK081  [28.14]CPMK122  
+[12.67]CPMK032  
+[3.13]MK13  [3.13]MK14  [4.13]SISTEM OPERASI  
+[3.13]MK15  [4.13]PENGANTAR MANAJEMEN  
+[14.41]CPMK041  
+[4.13]MANAJEMEN PROSES BISNIS  [17.79]CPMK061  [3.13]MK16  [4.13]KEWIRAUSAHAAN  [23.08]CPMK091  
+[3.13]MK17  [23.08]CPMK091  [3.13]MK18  [4.13]PENGANTAR AKUNTANSI  [26.52]CPMK111  
+[3.13]MK19  [4.13]PEMROGRAMAN BERORIENTASI OBJEK  [4.13]ANALISIS DAN PERANCANGAN SISTEM   [12.67]CPMK032  
+[23.08]CPMK091  
+[3.13]MK20  [4.13]INFORMASI  [4.13]DESAIN UI/UX  [12.67]CPMK031  [12.67]CPMK032  [3.13]MK21  
+[3.13]MK22  [4.13]SISTEM DAN MANAJEMEN BASIS DATA  [4.13]PEMROGRAMAN WEB  [11.02]CPMK021  
+[12.67]CPMK033  [12.67]CPMK032  
+[11.02]CPMK022  
+[3.13]MK23  [4.13]MANAJEMEN PROYEK SISTEM   [12.67]CPMK032  
+[20.96]CPMK081  
+[3.13]MK24  [4.13]INFORMASI  
+[12.67]CPMK033  
+[4.13]DATA SCIENCE  [19.47]CPMK071  [19.47]CPMK072  [3.13]MK25  
+[3.13]MK26  [4.13]SISTEM ENTERPRISE  
+[19.47]CPMK073  [20.96]CPMK081  [23.08]CPMK091  
+[3.13]MK27  [4.13]RINTISAN BISNIS DIGITAL  [3.13]MK28  [4.13]DESAIN DAN MANAJEMEN JARINGAN   [4.13]RISET OPERASI  [14.41]CPMK041  [23.08]CPMK091  [4.13]KOMPUTER  [23.08]CPMK092  
+[3.13]MK29  [3.13]MK30  [4.13]PENGUJIAN PERANGKAT LUNAK  [12.67]CPMK031  [20.96]CPMK081  
+[3.13]MK31  [4.13]MANAJEMEN INVESTASI TI  
+[12.67]CPMK032  
+[3.13]MK32  [4.13]PROTEKSI ASET INFORMASI  [14.41]CPMK042  
+[17.60]CPMK061  [17.60]CPMK062  
+[3.13]MK33  [4.13]DATA WAREHOUSE DAN DATA MINING  [4.13]TATA KELOLA TI  [11.02]CPMK021  
+[17.60]CPMK063  
+[11.02]CPMK022  
+[4.13]CAPSTONE PROJECT  [12.67]CPMK031  [17.60]CPMK061  
+[20.96]CPMK081  
+[3.13]MK35  [12.67]CPMK032  
+[17.60]CPMK062  [20.96]CPMK082  [3.13]MK34  
+[4.13]STATISTIK  [17.60]CPMK063  [19.28]CPMK073  [3.13]MK36  
+[3.13]MK37  [4.13]BAHASA INGGRIS  
+[12.67]CPMK033  [20.96]CPMK081  
+[3.13]MK38  [4.13]PERENCANAAN STRATEGIS SI/TI  [4.13]MANAJEMEN LAYANAN TI  [17.60]CPMK061  
+[29.86]CPMK132  
+[17.60]CPMK062  
+[3.13]MK39  [3.13]MK40  [4.13]ETIKA PROFESI  [4.13]MAGANG  [16.11]CPMK051  [17.60]CPMK061  [16.11]CPMK052  [17.60]CPMK062  [17.60]CPMK063  
+[16.11]CPMK052  [19.28]CPMK073  [28.14]CPMK121  
+[3.13]MK42  [4.13]METODOLOGI PENELITIAN  
+[28.14]CPMK122  [29.86]CPMK131  [29.86]CPMK132  [31.66]CPMK141  [3.13]MK41  [29.86]CPMK131  [31.66]CPMK142  
+[4.13]KETERAMPILAN INTERPERSONAL  [29.86]CPMK132  [3.13]MK43  [4.13]KULIAH KERJA NYATA  [16.11]CPMK051  [16.11]CPMK052  [16.11]CPMK052  [19.28]CPMK073  [24.80]CPMK102  [26.52]CPMK111  [26.52]CPMK112  
+[3.13]MK44  [3.13]MK45  [4.13]TUGAS AKHIR  [4.13]TEKNOLOGI DAN MASYARAKAT  [16.11]CPMK052  [19.28]CPMK073  [28.14]CPMK121  [28.14]CPMK122  [28.14]CPMK121  [29.86]CPMK131  [29.86]CPMK132  [31.66]CPMK141  [19.28]CPMK073  [28.14]CPMK122  [29.86]CPMK131  [29.86]CPMK132  [31.66]CPMK142  
+[3.13]MK46  [3.13]MK47  [4.13]KULIAH LAPANGAN  [15.92]CPMK052  [16.11]CPMK052  [29.86]CPMK131  
+[31.66]CPMK141  
+[29.86]CPMK132  [31.66]CPMK142  [29.86]CPMK131  [29.86]CPMK132  
+[3.13]MK48  [4.13]PEMROGRAMAN MOBILE  [4.13]INTERNET UNTUK SEGALA  [12.46]CPMK032  [3.13]MK49  [4.13]TEKNOLOGI PEMROGRAMAN  [14.20]CPMK041  
+[3.13]MK50  [4.13]ARSITEKTUR TEKNOLOGI  [12.46]CPMK032  
+[14.20]CPMK042  
+[3.13]MK51  [4.13]KOMPUTASI AWAN  [14.20]CPMK041  [3.13]MK52  
+[3.13]MK53  [4.13]MANAJEMEN RISIKO TI  
+[14.20]CPMK041  
+[4.13]MANAJEMEN PERUBAHAN  [17.60]CPMK061  [17.60]CPMK062  [3.13]MK54  [4.13]PENGUKURAN KINERJA TI  [17.60]CPMK063  [17.60]CPMK061  [17.60]CPMK062  
+[3.13]MK55  [4.13]MANAJEMEN KEBERLANGSUNGAN   [17.60]CPMK063  [17.60]CPMK061  [4.13]BISNIS  [17.60]CPMK062  [3.13]MK56  
+[3.13]MK57  [4.13]AUDIT SISTEM INFORMASI  
+[17.60]CPMK063  [17.60]CPMK061  [17.60]CPMK064  [17.60]CPMK062  
+[4.13]SISTEM PENDUKUNG KEPUTUSAN  [17.60]CPMK063  [17.60]CPMK061  [3.13]MK58  [17.60]CPMK064  [17.60]CPMK062  
+[3.13]MK59  [4.13]VISUALISASI INFORMASI  
+[17.60]CPMK063  
+[4.13]SISTEM CERDAS  [17.60]CPMK064  
+[20.96]CPMK082  [20.96]CPMK082  
+[3.13]MK60  [4.13]TEKNIK PERAMALAN  [20.96]CPMK082  [3.13]MK61  [4.13]PENGOLAHAN CITRA  [20.96]CPMK082  
+[3.13]MK62  [3.13]MK63  [4.13]MANAJEMEN MEREK DIGITAL  [20.96]CPMK082  
+[3.13]MK64  [4.13]PEMASARAN DIGITAL  
+[23.08]CPMK092  
+[4.13]KREATIF DIGITAL  [23.08]CPMK092  [3.13]MK65  [4.13]MANAJEMEN HUBUNGAN PELANGGAN  [23.08]CPMK092  
+[3.13]MK66  [4.13]MANAJEMEN RANTAI PASOK  [23.08]CPMK092  [23.08]CPMK092  
+
+--- PAGE 36 ---
+[15.35]NAMA PERGURUAN TINGGI   
+[4.03]LOGO  [16.58]NAMA FAKULTAS   [32.08]KODE   
+[13.78]PROGRAM STUDI S1 SISTEM INFORMASI  [31.57]DOKUMEN  
+[14.36]RENCANA PEMBELAJARAN SEMESTER  
+[4.94]MATA KULIAH (MK)  [13.53]Kode  [16.91]Bahan Kajian (BK)  [22.70]BOBOT (sks)  [27.50]SEMESTER  [31.79]Tanggal   [31.36]Penyusunan  
+[21.79]T [Teori] =?   
+[3.01].......  [11.81]....  [16.73]....  [22.15]<<  [22.15]dengan   [22.70]tulis   
+[24.22]P [Praktikum]   [30.85]<<  [31.40]tulis dengan urutan   
+[24.15]dengan angka   [24.44]=? <<  [25.57]tulis   
+[28.55][ ]  [31.57]Tanggal Bulan   
+[22.22]latin  [22.30]angka   
+[26.84]<<  [27.39]tulis dengan angka   
+[22.93]>>  [24.77]latin  [25.48]>>  [28.15]latin  [28.86]>>  [32.05]Tahun  [33.06]>>  
+[3.01]PENGESAHAN  [11.81]Dosen Pengembang RPS  [22.77]Koordinator BK  [30.01]Ka Prodi  
+[23.32](jika ada)  
+[13.53]<<  [14.08]Nama Dosen Pengembang RPS  [16.25]TTD   [19.25]>>  [21.97]TTD <<Nama Koordinator   [30.48]TTD  [23.71]BK>>  [29.10]<<Nama Kaprodi>>  
+[3.01]Capaian   [3.01]Pembelajaran  [6.72]CPL-PRODI yang dibebankan pada MK  
+[6.72]CPKXX  [11.81]Tuliskan beberapa butir CPL Prodi yang dibebankan pada mata kuliah mencangkup ranah Sikap (S), Keterampilan Umum (KU),   
+[11.81]Keterampilan Khusus (KK) dan Pengetahuan (P) berdasarkan Rumpun MK (Bahan Kajian) pada kurikulum prodi  
+[6.72]Capaian Pembelajaran Mata Kuliah (CPMK)  
+[6.72]CPMKXXX  [11.81]CPMK merupakan turunan/uraian spesifik dari CPL-PRODI yang berkaitan dengan mata kuliah ini  
+[6.72]CPMKXXX  [11.81]Perubahan Butir CPMK bisa merupakan gabungan dari ranah Sikap(S), Keterampilan Umum (KU), Keterampilan Khusus (KK) dan   [11.81]Pengetahuan (P) berdasarkan Rumpun MK (Bahan Kajian) yang berhubungan dengan Mata Kuliah yang terdapat pada kurikulum prodi  
+[6.72]Kemampuan akhir tiap tahapan belajar (Sub-CPMK)  
+[11.81]Uraian spesifik turunan dari CPL yang dibebankan pada Mata Kuliah berkaitan dengan keluasan dan kedalaman materi pembelajaran   
+[6.72]Sub- CPMKXXX  [11.81]yang mengacu pada CPL  
+[6.72]Sub-CPMK..  
+[6.72]Sub-CPMK..  
+[6.72]Korelasi CPMK terhadap Sub-CPMK  
+[21.82]CPMK0415  [22.41]Sub-  [24.37]CPMK0416  [24.95]Sub-  [27.54]Sub-CPMK....  
+[16.73]CPMKXXX  
+[3.01]Deskrisi singkat   
+[3.01]MK  [6.72]Tuliskan relevansi & capaian materi pembelajaran/bahan kajian sesuai dengan Mata Kuliah ini dan sesuai Sub-CPMK  
+[3.01]Bahan Kajian:  
+[3.01]Materi   [6.72]Tuliskan bahan kajian dan dijabarkan dalam materi pembelajaran dalam pokok-pokok bahasan yang akan dipelajari oleh mahasiswa sesuai dengan Sub-CPMK tersebut   
+[3.01]Pembelajaran  [6.72]diatas.  
+[3.01]Pustaka  [6.72]Utama :  
+[6.72]1. Tuliskan pustaka utama yang digunakan, termasuk bahan ajar yang disusun oleh dosen pengampu MK ini  
+[6.72]Pendukung :  
+[6.72]2. Tuliskan pustaka pendukung jika ada, sebagai pengayaan literasi  
+[3.01]Dosen   
+[3.01]Pengampu  [6.72]<<Dosen Pengampu1>>, <<Dosen Pengampu2>>, <<Dosen Pengampu(n)>>  [3.01]Mata Kuliah   
+[3.01]Prasyarat  [6.72]Tuliskan mata kuliah prasyarat, jika ada  
+[21.89]Bentuk Pembelajaran;  
+[21.86]Metode Pembelajaran;  
+[21.79]Penugasan mahasiswa;  [28.05]Materi   [31.21]Bobot Penilaian  
+[3.56]Minggu ke-  [8.07]Sub CPMK  [13.20]Indikator  [17.53]Kriteria&Teknik  [22.48][Estimasi waktu]  [27.35]Pembelajaran  [32.41]???  
+[21.79]luring  [24.19]daring  
+[6.21]1  
+[6.21]2  
+
+--- PAGE 40 ---
+[15.35]NAMA PERGURUAN TINGGI   
+[4.03]LOGO  [16.58]NAMA FAKULTAS   [32.08]KODE   
+[13.78]PROGRAM STUDI S1 SISTEM INFORMASI  [31.57]DOKUMEN  
+[14.36]RENCANA PEMBELAJARAN SEMESTER  
+[4.94]MATA KULIAH (MK)  [13.53]Kode  [16.91]Bahan Kajian (BK)  [22.70]BOBOT (sks)  [27.50]SEMESTER  [31.79]Tanggal   [31.36]Penyusunan  
+[3.01]ALGORITMA DAN PEMROGRAMAN  [11.81]MK05  [16.73]Application Development / Programming   [22.37]T = 3  [24.95]P = 0  [28.66]1  [30.85]<<  [31.40]tulis dengan urutan   [31.57]Tanggal Bulan   
+[32.05]Tahun  [33.06]>>  
+[3.01]PENGESAHAN  [11.81]Dosen Pengembang RPS  [22.77]Koordinator BK  [30.01]Ka Prodi  
+[14.14]Dike Bayu Magfira, S.T., M.MT.  [14.29]Tri Deviasari Wulan, S.T.,M.T  [21.97]TTD <<Nama Koordinator   [23.32](jika ada)  [29.10]<<Nama Kaprodi>>  [30.48]TTD  [23.71]BK>>  
+[3.01]Capaian   [3.01]Pembelajaran  [6.72]CPL-PRODI yang dibebankan pada MK  
+[6.72]CPL-03  [11.81]Mampu memahami dan menggunakan berbagai metodologi pengembangan sistem beserta alat pemodelan sistem dan menganalisa   
+[11.81]kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi   
+[6.72]Capaian Pembelajaran Mata Kuliah (CPMK)  
+[6.72]CPMK031  [11.81]Mampu menggunakan berbagai metodologi pengembangan sistem   
+[6.72]CPMK032  [11.81]Mampu menggunakan berbagai alat pemodelan sistem   
+[6.72]CPMK033  [11.81]Mampu menganalisa kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi   
+[6.72]Kemampuan akhir tiap tahapan belajar (Sub-CPMK)  
+[11.81]Uraian spesifik turunan dari CPL yang dibebankan pada Mata Kuliah berkaitan dengan keluasan dan kedalaman materi pembelajaran   
+[6.72]Sub- CPMKXXX  [11.81]yang mengacu pada CPL  
+[6.72]Sub-CPMK..  
+[6.72]Sub-CPMK..  
+[6.72]Korelasi CPMK terhadap Sub-CPMK  
+[21.82]CPMK0415  [22.41]Sub-  [24.37]CPMK0416  [24.95]Sub-  [27.54]Sub-CPMK....  
+[16.73]CPMKXXX  
+[3.01]Deskrisi singkat   
+[3.01]MK  [6.72]Tuliskan relevansi & capaian materi pembelajaran/bahan kajian sesuai dengan Mata Kuliah ini dan sesuai Sub-CPMK  
+[3.01]Bahan Kajian:  
+[3.01]Materi   [6.72]Tuliskan bahan kajian dan dijabarkan dalam materi pembelajaran dalam pokok-pokok bahasan yang akan dipelajari oleh mahasiswa sesuai dengan Sub-CPMK tersebut   
+[3.01]Pembelajaran  [6.72]diatas.  
+[3.01]Pustaka  [6.72]Utama :  
+[6.72]1. Tuliskan pustaka utama yang digunakan, termasuk bahan ajar yang disusun oleh dosen pengampu MK ini  
+[6.72]Pendukung :  
+[6.72]2. Tuliskan pustaka pendukung jika ada, sebagai pengayaan literasi  
+[3.01]Dosen   
+[3.01]Pengampu  [6.72]<<Dosen Pengampu1>>, <<Dosen Pengampu2>>, <<Dosen Pengampu(n)>>  [3.01]Mata Kuliah   
+[3.01]Prasyarat  [6.72]Tuliskan mata kuliah prasyarat, jika ada  
+[21.89]Bentuk Pembelajaran;  
+[21.86]Metode Pembelajaran;  
+[21.79]Penugasan mahasiswa;  [28.05]Materi   [31.21]Bobot Penilaian  
+[3.56]Minggu ke-  [8.07]Sub CPMK  [13.20]Indikator  [17.53]Kriteria&Teknik  [22.48][Estimasi waktu]  [27.35]Pembelajaran  [32.41]???  
+[21.79]luring  [24.19]daring  
+[4.57]1  
+[4.57]2  
+
+--- PAGE 42 ---
+[15.35]NAMA PERGURUAN TINGGI   
+[4.03]LOGO  [16.58]NAMA FAKULTAS   [32.08]KODE   
+[13.78]PROGRAM STUDI S1 SISTEM INFORMASI  [31.57]DOKUMEN  
+[14.36]RENCANA PEMBELAJARAN SEMESTER  
+[4.94]MATA KULIAH (MK)  [13.53]Kode  [16.91]Bahan Kajian (BK)  [22.70]BOBOT (sks)  [27.50]SEMESTER  [31.79]Tanggal   [31.36]Penyusunan  
+[21.79]T [Teori] =?   
+[3.01]Data Warehouse dan Data Mining  [11.81]SID22521  [16.73]1.Data Warehousing For Dummies  [22.15]<<  [22.15]dengan   [22.70]tulis   
+[24.22]P [Praktikum]   [30.85]<<  [31.40]tulis dengan urutan   
+[24.15]dengan angka   [24.44]=? <<  [25.57]tulis   
+[28.55][ ]  [31.57]Tanggal Bulan   
+[22.22]latin  [22.30]angka   
+[26.84]<<  [27.39]tulis dengan angka   
+[22.93]>>  [24.77]latin  [25.48]>>  [28.15]latin  [28.86]>>  [32.05]Tahun  [33.06]>>  
+[3.01]PENGESAHAN  [11.81]Dosen Pengembang RPS  [22.77]Koordinator BK  [30.01]Ka Prodi  
+[23.32](jika ada)  
+[13.53]<<  [14.08]Nama Dosen Pengembang RPS  [16.25]TTD   [19.25]>>  [21.97]TTD <<Nama Koordinator   [30.48]TTD  [23.71]BK>>  [29.10]<<Nama Kaprodi>>  
+[3.01]Capaian   [3.01]Pembelajaran  [6.72]CPL-PRODI yang dibebankan pada MK  
+[6.72]CPKXX  [11.81]Tuliskan beberapa butir CPL Prodi yang dibebankan pada mata kuliah mencangkup ranah Sikap (S), Keterampilan Umum (KU),   
+[11.81]Keterampilan Khusus (KK) dan Pengetahuan (P) berdasarkan Rumpun MK (Bahan Kajian) pada kurikulum prodi  
+[6.72]Capaian Pembelajaran Mata Kuliah (CPMK)  
+[6.72]CPMKXXX  [11.81]CPMK merupakan turunan/uraian spesifik dari CPL-PRODI yang berkaitan dengan mata kuliah ini  
+[6.72]CPMKXXX  [11.81]Perubahan Butir CPMK bisa merupakan gabungan dari ranah Sikap(S), Keterampilan Umum (KU), Keterampilan Khusus (KK) dan   [11.81]Pengetahuan (P) berdasarkan Rumpun MK (Bahan Kajian) yang berhubungan dengan Mata Kuliah yang terdapat pada kurikulum prodi  
+[6.72]Kemampuan akhir tiap tahapan belajar (Sub-CPMK)  
+[11.81]Uraian spesifik turunan dari CPL yang dibebankan pada Mata Kuliah berkaitan dengan keluasan dan kedalaman materi pembelajaran   
+[6.72]Sub- CPMKXXX  [11.81]yang mengacu pada CPL  
+[6.72]Sub-CPMK..  
+[6.72]Sub-CPMK..  
+[6.72]Korelasi CPMK terhadap Sub-CPMK  
+[21.82]CPMK0415  [22.41]Sub-  [24.37]CPMK0416  [24.95]Sub-  [27.54]Sub-CPMK....  
+[16.73]CPMKXXX  
+[3.01]Deskrisi singkat   
+[3.01]MK  [6.72]Tuliskan relevansi & capaian materi pembelajaran/bahan kajian sesuai dengan Mata Kuliah ini dan sesuai Sub-CPMK  
+[3.01]Bahan Kajian:  
+[3.01]Materi   [6.72]Tuliskan bahan kajian dan dijabarkan dalam materi pembelajaran dalam pokok-pokok bahasan yang akan dipelajari oleh mahasiswa sesuai dengan Sub-CPMK tersebut   
+[3.01]Pembelajaran  [6.72]diatas.  
+[3.01]Pustaka  [6.72]Utama :  
+[6.72]1. Tuliskan pustaka utama yang digunakan, termasuk bahan ajar yang disusun oleh dosen pengampu MK ini  
+[6.72]Pendukung :  
+[6.72]2. Tuliskan pustaka pendukung jika ada, sebagai pengayaan literasi  
+[3.01]Dosen   
+[3.01]Pengampu  [6.72]<<Dosen Pengampu1>>, <<Dosen Pengampu2>>, <<Dosen Pengampu(n)>>  [3.01]Mata Kuliah   
+[3.01]Prasyarat  [6.72]Tuliskan mata kuliah prasyarat, jika ada  
+[21.89]Bentuk Pembelajaran;  
+[21.86]Metode Pembelajaran;  
+[21.79]Penugasan mahasiswa;  [28.05]Materi   [31.21]Bobot Penilaian  
+[3.56]Minggu ke-  [8.07]Sub CPMK  [13.20]Indikator  [17.53]Kriteria&Teknik  [22.48][Estimasi waktu]  [27.35]Pembelajaran  [32.41]???  
+[21.79]luring  [24.19]daring  
+[6.21]1  
+[6.21]2  
+
+--- PAGE 44 ---
+[5.78]FAKULTAS EKONOMI BISNIS DAN TEKNOLOGI DIGITAL  [6.13]UNIVERSITAS NAHDLATUL ULAMA SURABAYA  [6.32]PROGRAM STUDI S1 SISTEM INFORMASI  [11.90]DOKUMEN  [12.06]KODE   
+[2.93]ANALISIS DAN PERANCANGAN SISTEM INFORMASI  [3.54]MATA KULIAH (MK)  [5.70]SIA22308   [6.24]Kode  
+[6.50]RENCANA PEMBELAJARAN SEMESTER  
+[7.24]Systems Analysis & Design   [7.30]Bahan Kajian (BK)  [5.70]Dosen Pengembang RPS  [8.85]T [Teori] =   [9.11]BOBOT (sks)  [2.93]PENGESAHAN  [9.14]Koordinator BK  [9.59]P [Praktikum]   [10.62]SEMESTER  [9.13]2  [9.87]= 1  [10.99]3  [11.81]4 September 2025  [11.83]Penyusunan  
+[11.97]Tanggal   
+[2.93]Capaian   [2.93]Pembelajaran  [4.10]CPL-PRODI yang dibebankan pada MK  [6.74]Endang Sulistiyani  [9.16]TTD <<Endang   [9.24]Sulistiyani>>  
+[9.31](jika ada)  [11.09]<<Ima Kurniastuti>>  [11.41]Ka Prodi  [15.28]   [7.09]TTD   [11.56]TTD  
+[4.10]CPL-03  [5.70]Mampu memahami dan menggunakan berbagai metodologi pengembangan sistem beserta alat pemodelan sistem dan menganalisa   
+[4.10]Capaian Pembelajaran Mata Kuliah (CPMK)  [5.70]kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi   [4.10]CPMK031  
+[4.10]CPMK032  [5.70]Mampu memahami dan menggunakan berbagai metodologi pengembangan sistem  [4.10]CPMK033  [5.70]Mampu menggunakan berbagai alat pemodelan sistem   [4.10]Kemampuan akhir tiap tahapan belajar (Sub-CPMK)  [5.70]Mampu menganalisa kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi   
+[4.10]Sub- CPMK1  [4.10]Sub-CPMK2  [4.10]Sub-CPMK..  [5.70]Memahami konsep analisis dan Perancangan Sistem Informasi  [5.70]Menggunakan UML diagram untuk memodelkan sistem informasi  
+[4.10]Korelasi CPMK terhadap Sub-CPMK  [5.70]Menyusun kebutuhan sistem informasi  
+[7.24]CPMK031  [8.91]CPMK01  [9.02]Sub-  [7.24]CPMK032  [9.11]v  [9.58]Sub-CPMK02  [10.63]Sub-CPMK03  [7.24]CPMK033  [9.93]v  
+[4.10]Mata kuliah ini akan memberikan pengalaman mahasiswa untuk menyusun kebutuhan sistem informasi dan menggunakan UML untuk memodelkan sistem informasi    [10.98]v  [2.93]Deskrisi singkat   [2.93]MK  [2.93]Bahan Kajian:  
+[2.93]Materi   [4.10]melalui pemahaman terhadap metodologi pengembangan sistem informasi dalam kerangka menjalankan peran sebagai seorang sistem analis  [2.93]Pembelajaran  [2.93]Pustaka  [4.10]Tuliskan bahan kajian dan dijabarkan dalam materi pembelajaran dalam pokok-pokok bahasan yang akan dipelajari oleh mahasiswa sesuai dengan Sub-CPMK tersebut   [4.10]diatas.  [4.10]Utama :  
+[4.10]1. Tuliskan pustaka utama yang digunakan, termasuk bahan ajar yang disusun oleh dosen pengampu MK ini  
+[2.93]Dosen   [4.10]Pendukung :  [2.93]Pengampu  [2.93]Mata Kuliah   [4.10]2. Tuliskan pustaka pendukung jika ada, sebagai pengayaan literasi  [2.93]Prasyarat  [4.10]<<Dosen Pengampu1>>, <<Dosen Pengampu2>>, <<Dosen Pengampu(n)>>  [4.10]Tuliskan mata kuliah prasyarat, jika ada  
+[3.11]Minggu ke-  [4.52]Sub CPMK  [6.13]Indikator  [8.83]Penugasan mahasiswa;  [8.85]Metode Pembelajaran;  
+[8.86]Bentuk Pembelajaran;  
+[7.49]Kriteria&Teknik  [8.83]luring  [9.05][Estimasi waktu]  
+[4.10]Memahami konsep   [9.58]daring  
+[10.58]Pembelajaran  [10.79]Materi   [11.79]Bobot Penilaian  [12.16]???  
+[3.42]1  [4.10]analisis dan   [4.10]Perancangan Sistem   [4.10]Informasi  [5.70]ketepatan   [5.70]menjelaskan konsep   [7.24]Kriteria:ketepatan   [5.70]sistem informasi  [7.24]jawaban  [7.24]Teknik: diskusi dan   
+[4.10]Memahami konsep   [5.70]ketepatan   [7.24]tanya jawab  
+[9.58]kuliah dan   
+[7.24]Kriteria : ketepatan   [9.58]diskusi  
+[10.44]konsep sistem   [10.44]informasi  [12.81]2  
+[3.42]2  [4.10]analisis dan   [4.10]Perancangan Sistem   [4.10]Informasi  [5.70]menjelaskan peran   [5.70]analisis dan desain   [5.70]dalam SDLC  [7.24]jawaban  [7.24]Teknik : diskusi dan   [7.24]tanya jawab  [9.58]kuliah dan   [9.58]diskusi  [10.44]Peran analisis   [10.44]dan perancangan   [10.44]dalam SDLC  [12.81]2  
+[3.42]3  [4.10]Memahami konsep   [5.70]ketepatan   [4.10]analisis dan   [5.70]membedakan   [4.10]Perancangan Sistem   [5.70]karakteristik ragam   [4.10]Informasi  [5.70]metodologi   [5.70]pengembangan   [5.70]sistem informasi  [7.24]Kriteria : ketepatan   [7.24]jawaban  [7.24]Teknik : Kuis  [9.58]kuliah dan   [10.44]Metodologi   [9.58]kuis  [10.44]Pengembangan   [10.44]Sistem Informasi  [12.81]9  
+[3.42]4  [4.10]Menyusun   [5.70]ketepatan   [4.10]kebutuhan sistem   [5.70]mendefinisikan   [7.24]Kriteria : ketepatan   [4.10]informasi  [5.70]beragam sumber   [5.70]kebutuhan dan   
+[3.42]5  [5.70]teknik elisitasi  
+[7.24]jawaban  
+[4.10]Menyusun   [7.24]Teknik : diskusi dan   [7.24]tanya jawab  
+[9.58]kuliah dan   [9.58]diskusi  [10.44]Sumber   [10.44]kebutuhan dan   [10.44]teknik elisitasi  
+[4.10]kebutuhan sistem   [5.70]ketepatan   [12.81]2  [4.10]informasi  [5.70]mengidentifikasi   [5.70]kebutuhan sistem   
+[3.42]6  [4.10]Menyusun   [4.10]kebutuhan sistem   [5.70]informasi  [4.10]informasi  [5.70]ketepatan menyusun   [5.70]spesifikasi kebutuhan   
+[3.42]7  [4.10]Menyusun   [4.10]kebutuhan sistem   [5.70]sistem informasi  [5.70]ketepatan valiasi   [7.24]Kriteria : ketepatan   [7.24]menyusun dokumen   [9.58]kuliah dan   [7.24]SKPL  [9.58]tugas dan   
+[3.42]8  [4.10]informasi  [5.70]daftar kebutuhan  [7.24]Teknik  
+[9.58]menyusun   
+[4.10]Menyusun   [9.58]kebutuhan   [7.24]Kriteria  [9.58]sistem  
+[10.44]daftar kebutuhan   [10.44]sistem dan   
+[4.10]kebutuhan sistem   [10.44]dokumen SKPL  [12.73]10  [3.28](UTS)  [4.10]informasi  [5.70]Ketepatan menuliskan   [5.70]jawaban  [7.24]ketepatan jawaban   
+[3.42]9  [4.10]Menggunakan UML    [4.10]diagram untuk   [5.70]ketepatan   [7.24]sesuai perintah soal  [7.24]Kriteria: ketepatan   [9.58]UTS  [10.44]Materi 1-7  [12.73]20  [4.10]memodelkan sistem   
+[3.39]10  [4.10]informasi  [4.10]Menggunakan UML    
+[5.70]membedakan ragam   [5.70]jenis UML   [7.24]jawaban  
+[4.10]diagram untuk   [7.24]Teknik : diskusi  
+[9.58]Kuliah dan   [9.58]tanya   [9.58]jawab  [10.44]Pengenalan UML   [10.44]dan tools   [10.44]pembuatannya  [12.81]2  
+[4.10]memodelkan sistem   
+[3.39]11  [4.10]informasi  [4.10]Menggunakan UML    [4.10]diagram untuk   [4.10]memodelkan sistem   [5.70]Ketepatan membuat   [7.24]Kriteria : ketepatan   [4.10]informasi  [5.70]UC diagram   [7.24]jawaban  [7.24]Teknik : Tugas   [7.24]membuat UC diagram  [9.58]kuliah dan   [9.58]tugas  [10.44]diagram UML :  
+[7.24]Kriteria: ketepatan   [10.44]UC diagram  [12.73]10  [3.39]12  [4.10]Menggunakan UML    [4.10]diagram untuk   
+[4.10]memodelkan sistem   [4.10]informasi  [5.70]ketepatan membuat   [7.24]jawaban  
+[4.10]diagram untuk   [5.70]activity diagram   
+[7.24]Teknik : tugas   [7.24]membuat activity   
+[3.39]13  [7.24]diagram  
+[9.58]kuliah dan   [9.58]tugas  [10.44]diagram UML:  [4.10]Menggunakan UML    [10.44]Activity Diagram   [10.44]Diagram  [12.81]3  
+[4.10]memodelkan sistem   
+[3.39]14  [4.10]informasi  [4.10]Menggunakan UML    [4.10]diagram untuk   [7.24]Kriteria : ketepatan   [4.10]memodelkan sistem   [5.70]ketepatan membuat   [7.24]jawaban  [4.10]informasi  [5.70]sequence diagram  [7.24]Teknik : Tugas   [5.70]ketepatan   [7.24]membuat Sequence   [7.24]diagram  [9.58]kuliah dan   [9.58]tugas  [10.44]diagram UML:  [10.44]Sequence   [10.44]Diagram  [12.73]10  
+[3.39]15  [5.70]menyusun   [4.10]Menggunakan UML    [5.70]dokumen   [4.10]diagram untuk   [4.10]memodelkan sistem   [5.70]pemodelan sistem   [5.70]informasi yang   [5.70]selaras dengan   [7.24]Kriteria : kelengkapan   [7.24]jawaban  [10.44]dokumen   
+[4.10]informasi  [5.70]kebutuhan  [7.24]Teknik : Quiz   [5.70]ketepatan   [7.24]dokumen pemodelan   [5.70]menjelaskan   [7.24]sistem informasi  [9.58]kuliah dan   [7.24]Kriteria :  [9.58]kuis  [10.44]pemodelan   [10.44]sistem informasi  [12.81]5  
+[3.28](UAS)  [3.39]16  [4.10]Menggunakan UML    [4.10]diagram untuk   [4.10]memodelkan sistem   [5.70]keselarasan   [4.10]informasi  [5.70]rancangan sistem   [5.70]dengan spesifikasi   [7.24]keselarasan antara   [5.70]kebutuhan  [7.24]rancangan sistem dan   [7.24]daftar kebutuhan  [7.24]Teknik  [9.58]presentasi   [10.44]Validasi   [9.58]tugas besar  [10.44]rancangan sistem   [10.44]dan daftar   [10.44]kebutuhan  
+[12.65]100  [12.73]25  
+
+--- PAGE 45 ---
+[15.35]NAMA PERGURUAN TINGGI   
+[4.03]LOGO  [16.58]NAMA FAKULTAS   [32.08]KODE   
+[13.78]PROGRAM STUDI S1 SISTEM INFORMASI  [31.57]DOKUMEN  
+[14.36]RENCANA PEMBELAJARAN SEMESTER  
+[4.94]MATA KULIAH (MK)  [13.53]Kode  [16.91]Bahan Kajian (BK)  [22.70]BOBOT (sks)  [27.50]SEMESTER  [31.79]Tanggal   [31.36]Penyusunan  
+[21.79]T [Teori] =?   
+[3.01]ANALISIS DAN PERANCANGAN SISTEM   [3.01]INFORMASI  [11.81]....  [16.73]Systems Analysis & Design   [22.15]<<  [22.15]dengan   [22.70]tulis   [24.22]P [Praktikum]   [28.55][ ]  [24.15]dengan angka   [24.44]=? <<  [25.57]tulis   [30.85]<<  [31.40]tulis dengan urutan   [31.57]Tanggal Bulan   
+[22.22]latin  [22.30]angka   
+[26.84]<<  [27.39]tulis dengan angka   
+[22.93]>>  [24.77]latin  [25.48]>>  [28.15]latin  [28.86]>>  [32.05]Tahun  [33.06]>>  
+[3.01]PENGESAHAN  [11.81]Dosen Pengembang RPS  [22.77]Koordinator BK  [30.01]Ka Prodi  
+[23.32](jika ada)  
+[13.53]<<  [14.08]Nama Dosen Pengembang RPS  [16.25]TTD   [19.25]>>  [21.97]TTD <<Nama Koordinator   [30.48]TTD  [23.71]BK>>  [29.10]<<Nama Kaprodi>>  
+[3.01]Capaian   [3.01]Pembelajaran  [6.72]CPL-PRODI yang dibebankan pada MK  
+[6.72]CPL-03  [11.81]Mampu memahami dan menggunakan berbagai metodologi pengembangan sistem beserta alat pemodelan sistem dan menganalisa   
+[11.81]kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi   
+[6.72]Capaian Pembelajaran Mata Kuliah (CPMK)  
+[6.72]CPMK  [11.81]CPMK merupakan turunan/uraian spesifik dari CPL-PRODI yang berkaitan dengan mata kuliah ini  
+[6.72]CPMKXXX  [11.81]Perubahan Butir CPMK bisa merupakan gabungan dari ranah Sikap(S), Keterampilan Umum (KU), Keterampilan Khusus (KK) dan   [11.81]Pengetahuan (P) berdasarkan Rumpun MK (Bahan Kajian) yang berhubungan dengan Mata Kuliah yang terdapat pada kurikulum prodi  
+[6.72]Kemampuan akhir tiap tahapan belajar (Sub-CPMK)  
+[11.81]Uraian spesifik turunan dari CPL yang dibebankan pada Mata Kuliah berkaitan dengan keluasan dan kedalaman materi pembelajaran   
+[6.72]Sub- CPMKXXX  [11.81]yang mengacu pada CPL  
+[6.72]Sub-CPMK..  
+[6.72]Sub-CPMK..  
+[6.72]Korelasi CPMK terhadap Sub-CPMK  
+[21.82]CPMK0415  [22.41]Sub-  [24.37]CPMK0416  [24.95]Sub-  [27.54]Sub-CPMK....  
+[16.73]CPMKXXX  
+[3.01]Deskrisi singkat   
+[3.01]MK  [6.72]Tuliskan relevansi & capaian materi pembelajaran/bahan kajian sesuai dengan Mata Kuliah ini dan sesuai Sub-CPMK  
+[3.01]Bahan Kajian:  
+[3.01]Materi   [6.72]Tuliskan bahan kajian dan dijabarkan dalam materi pembelajaran dalam pokok-pokok bahasan yang akan dipelajari oleh mahasiswa sesuai dengan Sub-CPMK tersebut   
+[3.01]Pembelajaran  [6.72]diatas.  
+[3.01]Pustaka  [6.72]Utama :  
+[6.72]1. Tuliskan pustaka utama yang digunakan, termasuk bahan ajar yang disusun oleh dosen pengampu MK ini  
+[6.72]Pendukung :  
+[6.72]2. Tuliskan pustaka pendukung jika ada, sebagai pengayaan literasi  
+[3.01]Dosen   
+[3.01]Pengampu  [6.72]<<Dosen Pengampu1>>, <<Dosen Pengampu2>>, <<Dosen Pengampu(n)>>  [3.01]Mata Kuliah   
+[3.01]Prasyarat  [6.72]Tuliskan mata kuliah prasyarat, jika ada  
+[21.89]Bentuk Pembelajaran;  
+[21.86]Metode Pembelajaran;  
+[21.79]Penugasan mahasiswa;  [28.05]Materi   [31.21]Bobot Penilaian  
+[3.56]Minggu ke-  [8.07]Sub CPMK  [13.20]Indikator  [17.53]Kriteria&Teknik  [22.48][Estimasi waktu]  [27.35]Pembelajaran  [32.41]???  
+[21.79]luring  [24.19]daring  
+[6.21]1  
+[6.21]2  
+
+--- PAGE 47 ---
+[15.35]NAMA PERGURUAN TINGGI   
+[4.03]LOGO  [16.58]NAMA FAKULTAS   [32.08]KODE   
+[13.78]PROGRAM STUDI S1 SISTEM INFORMASI  [31.57]DOKUMEN  
+[14.36]RENCANA PEMBELAJARAN SEMESTER  
+[4.94]MATA KULIAH (MK)  [13.53]Kode  [16.91]Bahan Kajian (BK)  [22.70]BOBOT (sks)  [27.50]SEMESTER  [31.79]Tanggal   [31.36]Penyusunan  
+[21.79]T [Teori] =?   
+[3.01]Manajemen Proyek Sistem Informasi  [11.81]SIM22412  [16.73]Project Management   [22.15]<<  [22.15]dengan   [22.70]tulis   
+[24.22]P [Praktikum]   [30.85]<<  [31.40]tulis dengan urutan   
+[24.15]dengan angka   [24.44]=? <<  [25.57]tulis   
+[28.55][ ]  [31.57]Tanggal Bulan   
+[22.22]latin  [22.30]angka   
+[26.84]<<  [27.39]tulis dengan angka   
+[22.93]>>  [24.77]latin  [25.48]>>  [28.15]latin  [28.86]>>  [32.05]Tahun  [33.06]>>  
+[3.01]PENGESAHAN  [11.81]Dosen Pengembang RPS  [22.77]Koordinator BK  [30.01]Ka Prodi  
+[23.32](jika ada)  
+[13.53]<<  [14.08]Nama Dosen Pengembang RPS  [16.25]TTD   [19.25]>>  [21.97]TTD <<Nama Koordinator   [30.48]TTD  [23.71]BK>>  [29.10]<<Nama Kaprodi>>  
+[3.01]Capaian   [3.01]Pembelajaran  [6.72]CPL-PRODI yang dibebankan pada MK  
+[6.72]CPL-03  [11.81]Mampu memahami dan menggunakan berbagai metodologi pengembangan sistem beserta alat pemodelan sistem dan menganalisa   
+[11.81]kebutuhan pengguna dalam membangun sistem informasi untuk mencapai tujuan organisasi   
+[6.72]Capaian Pembelajaran Mata Kuliah (CPMK)  
+[6.72]CPMK  [11.81]CPMK merupakan turunan/uraian spesifik dari CPL-PRODI yang berkaitan dengan mata kuliah ini  
+[6.72]CPMKXXX  [11.81]Perubahan Butir CPMK bisa merupakan gabungan dari ranah Sikap(S), Keterampilan Umum (KU), Keterampilan Khusus (KK) dan   [11.81]Pengetahuan (P) berdasarkan Rumpun MK (Bahan Kajian) yang berhubungan dengan Mata Kuliah yang terdapat pada kurikulum prodi  
+[6.72]Kemampuan akhir tiap tahapan belajar (Sub-CPMK)  
+[11.81]Uraian spesifik turunan dari CPL yang dibebankan pada Mata Kuliah berkaitan dengan keluasan dan kedalaman materi pembelajaran   
+[6.72]Sub- CPMKXXX  [11.81]yang mengacu pada CPL  
+[6.72]Sub-CPMK..  
+[6.72]Sub-CPMK..  
+[6.72]Korelasi CPMK terhadap Sub-CPMK  
+[21.82]CPMK0415  [22.41]Sub-  [24.37]CPMK0416  [24.95]Sub-  [27.54]Sub-CPMK....  
+[16.73]CPMKXXX  
+[3.01]Deskrisi singkat   
+[3.01]MK  [6.72]Tuliskan relevansi & capaian materi pembelajaran/bahan kajian sesuai dengan Mata Kuliah ini dan sesuai Sub-CPMK  
+[3.01]Bahan Kajian:  
+[3.01]Materi   [6.72]Tuliskan bahan kajian dan dijabarkan dalam materi pembelajaran dalam pokok-pokok bahasan yang akan dipelajari oleh mahasiswa sesuai dengan Sub-CPMK tersebut   
+[3.01]Pembelajaran  [6.72]diatas.  
+[3.01]Pustaka  [6.72]Utama :  
+[6.72]1. Tuliskan pustaka utama yang digunakan, termasuk bahan ajar yang disusun oleh dosen pengampu MK ini  
+[6.72]Pendukung :  
+[6.72]2. Tuliskan pustaka pendukung jika ada, sebagai pengayaan literasi  
+[3.01]Dosen   
+[3.01]Pengampu  [6.72]<<Dosen Pengampu1>>, <<Dosen Pengampu2>>, <<Dosen Pengampu(n)>>  [3.01]Mata Kuliah   
+[3.01]Prasyarat  [6.72]Tuliskan mata kuliah prasyarat, jika ada  
+[21.89]Bentuk Pembelajaran;  
+[21.86]Metode Pembelajaran;  
+[21.79]Penugasan mahasiswa;  [28.05]Materi   [31.21]Bobot Penilaian  
+[3.56]Minggu ke-  [8.07]Sub CPMK  [13.20]Indikator  [17.53]Kriteria&Teknik  [22.48][Estimasi waktu]  [27.35]Pembelajaran  [32.41]???  
+[21.79]luring  [24.19]daring  
+[6.21]1  
+[6.21]2  
