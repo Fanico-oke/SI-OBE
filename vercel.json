@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm install --prefix frontend && npm install --prefix backend && cd frontend && npm run build && cd ../backend && npx prisma generate",
+  "buildCommand": "npm install --prefix frontend && npm install --prefix backend && npm run build --prefix frontend && cd backend && npx prisma generate",
   "outputDirectory": "frontend/dist",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index.ts" }
