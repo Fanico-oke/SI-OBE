@@ -1,6 +1,12 @@
 {
   "buildCommand": "npm install --include=dev --prefix frontend && npm install --include=dev --prefix backend && cd frontend && npx vite build && cd ../backend && npx prisma generate && npx tsc --skipLibCheck",
   "outputDirectory": "frontend/dist",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "backend/**",
+      "maxDuration": 30
+    }
+  },
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index.js" }
   ]
