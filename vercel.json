@@ -1,14 +1,7 @@
 {
-  "version": 2,
-  "buildCommand": "npm install --prefix frontend && npm install --prefix backend && cd frontend && npm run build && cd ../backend && npx tsc && npx prisma generate",
+  "buildCommand": "npm install --prefix frontend && npm install --prefix backend && cd frontend && npm run build && cd ../backend && npx prisma generate",
   "outputDirectory": "frontend/dist",
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api" },
-    { "source": "/uploads/(.*)", "destination": "/api" }
-  ],
-  "functions": {
-    "api/**/*.js": {
-      "maxDuration": 30
-    }
-  }
+    { "source": "/api/(.*)", "destination": "/api/index.ts" }
+  ]
 }
