@@ -29,7 +29,8 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
-app.use('/uploads', express.static('uploads'));
+const uploadsPath = (process.env.VERCEL === '1' || process.env.VERCEL_ENV !== undefined) ? '/tmp/uploads' : 'uploads';
+app.use('/uploads', express.static(uploadsPath));
 
 // --- API Status ---
 app.get('/api/status', (req, res) => {

@@ -6,9 +6,11 @@ import { authorize } from '../middleware/auth';
 import { validate, createKurikulumSchema } from '../lib/validators';
 import { seedTemplateData } from '../lib/kurikulum-template';
 
+import { getUploadsDir } from '../lib/uploads';
+
 const router = Router();
 
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: getUploadsDir() });
 
 // GET /api/kurikulum — list all
 router.get('/', async (req, res) => {

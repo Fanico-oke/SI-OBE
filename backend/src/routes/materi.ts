@@ -3,6 +3,7 @@ import { prisma } from '../lib/prisma';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
+import { getUploadsDir } from '../lib/uploads';
 
 const router = Router();
 
@@ -10,7 +11,7 @@ const router = Router();
 // Multer config for materi uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    const uploadDir = path.join(__dirname, '../../uploads/materi');
+    const uploadDir = getUploadsDir('materi');
     if (!fs.existsSync(uploadDir)) {
       fs.mkdirSync(uploadDir, { recursive: true });
     }
