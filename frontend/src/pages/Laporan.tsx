@@ -273,10 +273,10 @@ export function Laporan() {
                     </div>
                   </div>
                   <div className="text-right">
-                    <div className="font-bold text-4xl text-primary font-data-mono mb-2">IPK: {portofolioData.ipk}</div>
+                    <div className="font-bold text-4xl text-primary font-data-mono mb-2">Skor: {portofolioData.averageScore?.toFixed(1)}</div>
                     <div className="text-secondary font-bold text-body bg-secondary/10 px-4 py-1.5 rounded-full inline-flex items-center gap-2">
                       <span className="material-symbols-outlined text-[18px]">verified</span>
-                      {portofolioData.status}
+                      {portofolioData.recommendation}
                     </div>
                   </div>
                 </div>
@@ -284,7 +284,7 @@ export function Laporan() {
                 <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-12 bg-surface-container-lowest">
                   <div className="h-[350px] relative">
                     <ResponsiveContainer width="100%" height="100%">
-                      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={portofolioData.cpl}>
+                      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={(portofolioData.cplScores || []).map((c: any) => ({ subject: c.kode, A: c.score, fullMark: 100 }))}>
                         <PolarGrid stroke="var(--color-outline-variant)" />
                         <PolarAngleAxis dataKey="subject" tick={{ fill: 'var(--color-on-surface-variant)', fontSize: 13, fontWeight: 'bold' }} />
                         <PolarRadiusAxis angle={30} domain={[0, 100]} />
@@ -298,14 +298,14 @@ export function Laporan() {
                       <span className="material-symbols-outlined text-primary">checklist</span> Rincian Ketercapaian
                     </h4>
                     <ul className="space-y-5">
-                      {portofolioData.cpl.map((c: any) => (
-                        <li key={c.subject} className="flex items-center justify-between group">
-                          <span className="font-bold text-body text-on-surface group-hover:text-primary transition-colors">{c.subject}</span>
+                      {(portofolioData.cplScores || []).map((c: any) => (
+                        <li key={c.kode} className="flex items-center justify-between group">
+                          <span className="font-bold text-body text-on-surface group-hover:text-primary transition-colors">{c.kode}</span>
                           <div className="flex items-center gap-4 flex-1 ml-6">
                             <div className="flex-1 bg-surface-container-high rounded-full h-2.5 overflow-hidden">
-                              <div className={`h-full rounded-full transition-all duration-1000 ease-out ${c.A >= 75 ? 'bg-secondary' : 'bg-error'}`} style={{ width: `${c.A}%` }}></div>
+                              <div className={`h-full rounded-full transition-all duration-1000 ease-out ${c.score >= 75 ? 'bg-secondary' : 'bg-error'}`} style={{ width: `${c.score}%` }}></div>
                             </div>
-                            <span className={`font-data-mono font-bold w-14 text-right text-h3 ${c.A >= 75 ? 'text-secondary' : 'text-error'}`}>{c.A}%</span>
+                            <span className={`font-data-mono font-bold w-14 text-right text-h3 ${c.score >= 75 ? 'text-secondary' : 'text-error'}`}>{c.score}%</span>
                           </div>
                         </li>
                       ))}
