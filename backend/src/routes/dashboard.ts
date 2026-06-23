@@ -13,7 +13,8 @@ router.get('/stats', async (req, res) => {
     // Resolve which kurikulum to use — param or active
     const activeKurikulum = qKurikulumId
       ? await prisma.kurikulum.findUnique({ where: { id: qKurikulumId } })
-      : await prisma.kurikulum.findFirst({ where: { status: 'ACTIVE' }, orderBy: { createdAt: 'desc' } });
+      : await prisma.kurikulum.findFirst({ where: { status: 'ACTIVE' }, orderBy: { createdAt: 'desc' } })
+        ?? await prisma.kurikulum.findFirst({ orderBy: { createdAt: 'desc' } });
 
     const kurikulumId = activeKurikulum?.id;
 

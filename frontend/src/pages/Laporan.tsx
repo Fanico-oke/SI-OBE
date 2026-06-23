@@ -18,6 +18,10 @@ export function Laporan() {
   const [mkPage, setMkPage] = useState(1);
   const mkPageSize = 10;
   
+  // Kurikulum selector
+  const [kurikulumList, setKurikulumList] = useState<any[]>([]);
+  const [selectedKurikulumId, setSelectedKurikulumId] = useState('');
+
   // Real Data States
   const [cplData, setCplData] = useState<any[]>([]);
   const [mkEvaluasi, setMkEvaluasi] = useState<any[]>([]);
@@ -38,45 +42,56 @@ export function Laporan() {
   const [loadingCqi, setLoadingCqi] = useState(false);
   const [searchError, setSearchError] = useState('');
 
+  // Fetch kurikulum list on mount
+  useEffect(() => {
+    axios.get('/api/kurikulum').then(res => {
+      const list = res.data;
+      setKurikulumList(list);
+      // Default: ACTIVE first, then latest
+      const active = list.find((k: any) => k.status === 'ACTIVE') || list[0];
+      if (active) setSelectedKurikulumId(active.id);
+    }).catch(() => {});
+  }, []);
+
   // Fetch Ketercapaian CPL Angkatan
   useEffect(() => {
-    if (activeTab === 'ketercapaian') {
+    if (activeTab === 'ketercapaian' && selectedKurikulumId) {
       setLoadingCpl(true);
-      axios.get(`/api/laporan/ketercapaian?angkatan=${angkatan}`)
+      axios.get(`/api/laporan/ketercapaian?angkatan=${angkatan}&kurikulumId=${selectedKurikulumId}`)
         .then(res => setCplData(res.data))
         .catch(err => console.error(err))
         .finally(() => setLoadingCpl(false));
     }
-  }, [activeTab, angkatan]);
+  }, [activeTab, angkatan, selectedKurikulumId]);
 
   // Fetch Evaluasi MK
   useEffect(() => {
-    if (activeTab === 'evaluasi') {
+    if (activeTab === 'evaluasi' && selectedKurikulumId) {
       setLoadingMk(true);
-      axios.get(`/api/laporan/evaluasi-mk`)
+      axios.get(`/api/laporan/evaluasi-mk?kurikulumId=${selectedKurikulumId}`)
         .then(res => setMkEvaluasi(res.data))
         .catch(err => console.error(err))
         .finally(() => setLoadingMk(false));
     }
-  }, [activeTab]);
+  }, [activeTab, selectedKurikulumId]);
 
   // Fetch CQI
   useEffect(() => {
-    if (activeTab === 'cqi') {
+    if (activeTab === 'cqi' && selectedKurikulumId) {
       setLoadingCqi(true);
-      axios.get(`/api/act/action-plan`)
+      axios.get(`/api/act/action-plan?kurikulumId=${selectedKurikulumId}`)
         .then(res => setCqiData(res.data))
         .catch(err => console.error(err))
         .finally(() => setLoadingCqi(false));
     }
-  }, [activeTab]);
+  }, [activeTab, selectedKurikulumId]);
 
   const handleSearchNim = async () => {
     if (searchNim.trim() === '') return;
     setSearchError('');
     setPortofolioData(null);
     try {
-      const res = await axios.get(`/api/laporan/portofolio/${searchNim.trim()}`);
+      const res = await axios.get(`/api/laporan/portofolio/${searchNim.trim()}?kurikulumId=${selectedKurikulumId}`);
       setPortofolioData(res.data);
     } catch (err: any) {
       if (err.response?.status === 404) setSearchError('Mahasiswa dengan NIM tersebut tidak ditemukan.');
@@ -106,7 +121,7 @@ export function Laporan() {
 
   const handleExportPdf = async () => {
     try {
-      const res = await axios.get('/api/laporan/export-pdf', { responseType: 'blob' });
+      const res = await axios.get(`/api/laporan/export-pdf?kurikulumId=${selectedKurikulumId}`, { responseType: 'blob' });
       const url = window.URL.createObjectURL(new Blob([res.data], { type: 'application/pdf' }));
       const a = document.createElement('a');
       a.href = url;
@@ -140,6 +155,25 @@ export function Laporan() {
           <button onClick={handlePrintPdf} className="btn-primary flex items-center gap-2">
             <span className="material-symbols-outlined">print</span> Cetak PDF
           </button>
+        </div>
+      </div>
+
+      {/* Kurikulum Selector */}
+      <div className="bg-surface-container-lowest rounded-xl p-4 flex items-center gap-4">
+        <span className="material-symbols-outlined text-primary">school</span>
+        <div className="flex-1">
+          <label className="input-label text-xs mb-1">Kurikulum</label>
+          <select
+            className="input-base w-full"
+            value={selectedKurikulumId}
+            onChange={e => setSelectedKurikulumId(e.target.value)}
+          >
+            {kurikulumList.map(k => (
+              <option key={k.id} value={k.id}>
+                {k.nama} ({k.status}) — {k.tahunMulai}/{k.tahunSelesai}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
 

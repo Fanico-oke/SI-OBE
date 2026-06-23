@@ -15,7 +15,8 @@ router.get('/tujuan', async (req, res) => {
   try {
     const kur = kurikulumId
       ? await prisma.kurikulum.findUnique({ where: { id: String(kurikulumId) } })
-      : await prisma.kurikulum.findFirst({ where: { status: 'ACTIVE' }, orderBy: { createdAt: 'desc' } });
+      : await prisma.kurikulum.findFirst({ where: { status: 'ACTIVE' }, orderBy: { createdAt: 'desc' } })
+        ?? await prisma.kurikulum.findFirst({ orderBy: { createdAt: 'desc' } });
     if (!kur) return res.status(404).json({ error: 'Kurikulum tidak ditemukan' });
     res.json({
       kurikulumId: kur.id,

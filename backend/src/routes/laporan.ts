@@ -4,23 +4,60 @@ import PDFDocument from 'pdfkit';
 
 const router = Router();
 
+// Helper: get kurikulum by ID or fallback to ACTIVE, then latest
+async function resolveKurikulum(kurikulumId?: string) {
+  if (kurikulumId) {
+    return prisma.kurikulum.findUnique({ where: { id: kurikulumId } });
+  }
+  // Fallback: ACTIVE first, then latest regardless of status
+  const active = await prisma.kurikulum.findFirst({
+    where: { status: 'ACTIVE' },
+    orderBy: { createdAt: 'desc' }
+  });
+  if (active) return active;
+
+  return prisma.kurikulum.findFirst({
+    orderBy: { createdAt: 'desc' }
+  });
+}
+
 
 // GET Ketercapaian Lulusan Angkatan (Real Data from NilaiSoal → SubCPMK → CPMK → CPL)
 router.get('/ketercapaian', async (req, res) => {
   try {
-    // Ambil kurikulum aktif
-    const activeKurikulum = await prisma.kurikulum.findFirst({
-      where: { status: 'ACTIVE' },
-      orderBy: { createdAt: 'desc' }
-    });
+    const kurikulumId = req.query.kurikulumId as string | undefined;
+    const angkatan = req.query.angkatan as string | undefined;
 
-    if (!activeKurikulum) {
+    const kurikulum = await resolveKurikulum(kurikulumId);
+    if (!kurikulum) {
       return res.json([]);
+    }
+
+    // Build NilaiSoal filter based on angkatan
+    const nilaiWhere: any = {};
+    if (angkatan) {
+      // Filter by mahasiswa angkatan
+      const mahasiswaIds = await prisma.mahasiswa.findMany({
+        where: { angkatan: parseInt(angkatan) },
+        select: { id: true }
+      });
+      if (mahasiswaIds.length > 0) {
+        nilaiWhere.mahasiswaId = { in: mahasiswaIds.map(m => m.id) };
+      } else {
+        // No students in this angkatan → return empty scores
+        const cpls = await prisma.cPL.findMany({
+          where: { kurikulumId: kurikulum.id },
+          orderBy: { kode: 'asc' }
+        });
+        return res.json(cpls.map(cpl => ({
+          subject: cpl.kode, A: 0, fullMark: 100, deskripsi: cpl.deskripsi, hasData: false
+        })));
+      }
     }
 
     // Query CPL with nested CPMK → SubCPMK → AsesmenSoal → NilaiSoal
     const cpls = await prisma.cPL.findMany({
-      where: { kurikulumId: activeKurikulum.id },
+      where: { kurikulumId: kurikulum.id },
       include: {
         cpmk: {
           include: {
@@ -28,7 +65,7 @@ router.get('/ketercapaian', async (req, res) => {
               include: {
                 asesmenSoal: {
                   include: {
-                    nilai: true
+                    nilai: nilaiWhere.mahasiswaId ? { where: nilaiWhere } : true
                   }
                 }
               }
@@ -75,17 +112,15 @@ router.get('/ketercapaian', async (req, res) => {
 // GET Evaluasi Mata Kuliah (Real Data from NilaiSoal via Kelas → Asesmen → AsesmenSoal → NilaiSoal)
 router.get('/evaluasi-mk', async (req, res) => {
   try {
-    const activeKurikulum = await prisma.kurikulum.findFirst({
-      where: { status: 'ACTIVE' },
-      orderBy: { createdAt: 'desc' }
-    });
+    const kurikulumId = req.query.kurikulumId as string | undefined;
 
-    if (!activeKurikulum) {
+    const kurikulum = await resolveKurikulum(kurikulumId);
+    if (!kurikulum) {
       return res.json([]);
     }
 
     const mks = await prisma.mataKuliah.findMany({
-      where: { kurikulumId: activeKurikulum.id },
+      where: { kurikulumId: kurikulum.id },
       include: {
         kelas: {
           include: {
@@ -150,6 +185,7 @@ router.get('/evaluasi-mk', async (req, res) => {
 router.get('/portofolio/:nim', async (req, res) => {
   try {
     const nim = req.params.nim;
+    const kurikulumId = req.query.kurikulumId as string | undefined;
 
     // Cari data mahasiswa
     const mahasiswa = await prisma.mahasiswa.findUnique({ where: { nim } });
@@ -161,18 +197,14 @@ router.get('/portofolio/:nim', async (req, res) => {
     const mhsUser = await prisma.user.findFirst({ where: { username: nim } });
     const nama = mhsUser ? mhsUser.nama : mahasiswa.nama;
 
-    const activeKurikulum = await prisma.kurikulum.findFirst({
-      where: { status: 'ACTIVE' },
-      orderBy: { createdAt: 'desc' }
-    });
-
-    if (!activeKurikulum) {
-      return res.status(404).json({ error: 'Tidak ada kurikulum aktif' });
+    const kurikulum = await resolveKurikulum(kurikulumId);
+    if (!kurikulum) {
+      return res.status(404).json({ error: 'Tidak ada kurikulum tersedia' });
     }
 
     // Query CPL → CPMK → SubCPMK → AsesmenSoal → NilaiSoal (filtered by this student)
     const cpls = await prisma.cPL.findMany({
-      where: { kurikulumId: activeKurikulum.id },
+      where: { kurikulumId: kurikulum.id },
       include: {
         cpmk: {
           include: {
@@ -241,16 +273,14 @@ router.get('/portofolio/:nim', async (req, res) => {
 // GET /export-pdf — generate Laporan OBE PDF
 router.get('/export-pdf', async (req, res) => {
   try {
-    // Get active kurikulum
-    const activeKurikulum = await prisma.kurikulum.findFirst({
-      where: { status: 'ACTIVE' },
-      orderBy: { createdAt: 'desc' }
-    });
-    if (!activeKurikulum) return res.status(404).json({ error: 'Tidak ada kurikulum aktif' });
+    const kurikulumId = req.query.kurikulumId as string | undefined;
+
+    const kurikulum = await resolveKurikulum(kurikulumId);
+    if (!kurikulum) return res.status(404).json({ error: 'Tidak ada kurikulum tersedia' });
 
     // Get CPL data (same as /ketercapaian)
     const cpls = await prisma.cPL.findMany({
-      where: { kurikulumId: activeKurikulum.id },
+      where: { kurikulumId: kurikulum.id },
       include: {
         cpmk: { include: { subCpmk: { include: { asesmenSoal: { include: { nilai: true } } } } } }
       },
@@ -272,9 +302,9 @@ router.get('/export-pdf', async (req, res) => {
     // Title
     doc.fontSize(20).font('Helvetica-Bold').text('LAPORAN CAPAIAN OBE', { align: 'center' });
     doc.moveDown(0.5);
-    doc.fontSize(12).font('Helvetica').text(activeKurikulum.nama, { align: 'center' });
-    doc.fontSize(10).text(`Program Studi: ${activeKurikulum.prodi}`, { align: 'center' });
-    doc.text(`Periode: ${activeKurikulum.tahunMulai} - ${activeKurikulum.tahunSelesai}`, { align: 'center' });
+    doc.fontSize(12).font('Helvetica').text(kurikulum.nama, { align: 'center' });
+    doc.fontSize(10).text(`Program Studi: ${kurikulum.prodi}`, { align: 'center' });
+    doc.text(`Periode: ${kurikulum.tahunMulai} - ${kurikulum.tahunSelesai}`, { align: 'center' });
     doc.moveDown(1.5);
 
     // Summary

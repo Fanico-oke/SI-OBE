@@ -23,22 +23,7 @@ router.get('/', async (req: any, res) => {
   }
 });
 
-// PUT /api/notifikasi/:id/read
-router.put('/:id/read', async (req: any, res) => {
-  try {
-    const { id } = req.params;
-    const notification = await prisma.notification.update({
-      where: { id },
-      data: { isRead: true }
-    });
-    res.json(notification);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Failed to update notification' });
-  }
-});
-
-// PUT /api/notifikasi/read-all
+// PUT /api/notifikasi/read-all — MUST be before /:id/read to avoid route collision
 router.put('/read-all', async (req: any, res) => {
   try {
     if (!req.user) return res.status(401).json({ error: 'Unauthorized' });
@@ -51,6 +36,21 @@ router.put('/read-all', async (req: any, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Failed to mark all as read' });
+  }
+});
+
+// PUT /api/notifikasi/:id/read
+router.put('/:id/read', async (req: any, res) => {
+  try {
+    const { id } = req.params;
+    const notification = await prisma.notification.update({
+      where: { id },
+      data: { isRead: true }
+    });
+    res.json(notification);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to update notification' });
   }
 });
 

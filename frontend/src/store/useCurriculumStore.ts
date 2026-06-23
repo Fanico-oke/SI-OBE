@@ -45,16 +45,17 @@ export const useCurriculumStore = create<CurriculumState>()(
           const res = await axios.get('/api/kurikulum');
           const curriculums = res.data;
           const currentId = useCurriculumStore.getState().activeCurriculumId;
-          const active = curriculums.find((k: Curriculum) => k.status === 'ACTIVE');
+          const active = curriculums.find((k: Curriculum) => k.status === 'ACTIVE')
+            || [...curriculums].sort((a: Curriculum, b: Curriculum) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())[0];
           const updates: any = { curriculums, isLoading: false };
           
-          // Auto-select ACTIVE kurikulum if:
+          // Auto-select kurikulum if:
           // 1. No kurikulum selected
           // 2. Current selection no longer exists
-          // 3. Current selection is ARCHIVED
+          // 3. Current selection is ARCHIVED and there's an ACTIVE one
           if (active) {
             const current = currentId ? curriculums.find((k: Curriculum) => k.id === currentId) : null;
-            if (!currentId || !current || current.status === 'ARCHIVED') {
+            if (!currentId || !current) {
               updates.activeCurriculumId = active.id;
               updates.activeCurriculumStatus = active.status;
             }
@@ -126,7 +127,8 @@ export const useCurriculumStore = create<CurriculumState>()(
       }),
 
       resetToActive: () => set((state) => {
-        const active = state.curriculums.find(c => c.status === 'ACTIVE');
+        const active = state.curriculums.find(c => c.status === 'ACTIVE')
+          || [...state.curriculums].sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())[0];
         if (active) {
           return { activeCurriculumId: active.id, activeCurriculumStatus: active.status };
         }
