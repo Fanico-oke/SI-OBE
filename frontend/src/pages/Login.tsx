@@ -4,7 +4,7 @@ import { useAuthStore } from '../store/authStore';
 
 export function Login() {
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('123'); // Default for dummy demo
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const login = useAuthStore(state => state.login);
@@ -159,24 +159,7 @@ export function Login() {
             </button>
           </form>
 
-          <div className="mt-8 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
-            <div className="relative">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-outline-variant/60" />
-              </div>
-              <div className="relative flex justify-center text-sm">
-                <span className="px-3 bg-background text-on-surface-variant">Demo Mode</span>
-              </div>
-            </div>
 
-            <button
-              onClick={handleSeed}
-              className="btn-secondary w-full mt-4 flex justify-center"
-            >
-              <span className="material-symbols-outlined text-[18px] mr-2">database</span>
-              Generate Akun Demo (Seed DB)
-            </button>
-          </div>
         </div>
       </div>
     </div>
