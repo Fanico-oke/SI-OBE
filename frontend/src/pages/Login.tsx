@@ -117,7 +117,7 @@ export function Login() {
                 className="input-base mt-1"
                 value={username}
                 onChange={e => setUsername(e.target.value)}
-                placeholder="kaprodi / dosen / admin / 120220001"
+                placeholder="Masukkan username"
               />
             </div>
 

@@ -68,12 +68,8 @@ export default function TopNavBar() {
             <span className="material-symbols-outlined text-[20px]">settings</span>
           </Link>
         </div>
-        <Link to="/profil" className="h-9 w-9 rounded-full bg-surface-variant overflow-hidden border-2 border-outline-variant cursor-pointer block hover:ring-2 hover:ring-primary/30 transition-all ml-1">
-          <img
-            alt="User Avatar"
-            className="h-full w-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsxQSAsOSVwTWTJxifKQW057NDsRNrLMVHab5sV6lmntd6mGSKopsfImBydizFd-tPnQKkNq_KYid5tWFkXHJif9WeLEvZrYKm-ZGUlni5QlgUCYpl6nBO4IssYwwyLXcLPYT1DbytROosS9MDZTNFNe_j2cX2sorjSjoTRXVqcs4Q_969Yx6YMDgc-52mBZGMzt_z5hjZ48w1NdgkzweE7cJvNmzmppAeJ26FKUoF73oCrJtwo_lffIZtX7EO8tqTF5gy1XM0YtI"
-          />
+        <Link to="/profil" className="h-9 w-9 rounded-full bg-primary/10 overflow-hidden border-2 border-primary/30 cursor-pointer flex items-center justify-center hover:ring-2 hover:ring-primary/30 transition-all ml-1">
+          <span className="material-symbols-outlined text-primary text-[20px]">person</span>
         </Link>
       </div>
     </header>
