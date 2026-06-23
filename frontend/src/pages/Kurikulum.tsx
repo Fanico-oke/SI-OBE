@@ -14,6 +14,8 @@ export const Kurikulum = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [statusFilter, setStatusFilter] = useState('');
   const [pdcaProgressMap, setPdcaProgressMap] = useState<Record<string, any>>({});
+  const [deleteTarget, setDeleteTarget] = useState<{id: string, nama: string} | null>(null);
+  const [deleteConfirmText, setDeleteConfirmText] = useState('');
 
   useEffect(() => {
     const fetchProgress = async () => {
@@ -65,6 +67,18 @@ export const Kurikulum = () => {
   useEffect(() => {
     fetchCurriculums();
   }, [fetchCurriculums]);
+
+  const handleDelete = async () => {
+    if (!deleteTarget || deleteConfirmText !== deleteTarget.nama) return;
+    try {
+      await deleteCurriculum(deleteTarget.id);
+      addToast(`Kurikulum "${deleteTarget.nama}" berhasil dihapus`, 'success');
+    } catch {
+      addToast('Gagal menghapus kurikulum', 'error');
+    }
+    setDeleteTarget(null);
+    setDeleteConfirmText('');
+  };
 
   return (
     <div className="w-full space-y-4">
@@ -211,7 +225,7 @@ export const Kurikulum = () => {
                           <button onClick={() => useCurriculumStore.getState().setActiveCurriculum(c.id)} className="btn-ghost">Edit</button>
                         </Link>
                       )}
-                      <button onClick={() => deleteCurriculum(c.id)} className="btn-icon text-error hover:bg-error/10" title="Hapus">
+                      <button onClick={() => setDeleteTarget({id: c.id, nama: c.nama})} className="btn-icon text-error hover:bg-error/10" title="Hapus">
                           <span className="material-symbols-outlined">delete</span>
                         </button>
                     </>
@@ -233,6 +247,45 @@ export const Kurikulum = () => {
           </div>
         )}
       </div>
+
+      </div>
+
+      {/* Delete Confirmation Modal */}
+      {deleteTarget && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+          <div className="bg-surface rounded-2xl p-6 max-w-md w-full shadow-xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-12 w-12 rounded-full bg-error/10 flex items-center justify-center">
+                <span className="material-symbols-outlined text-error text-[28px]">warning</span>
+              </div>
+              <h3 className="font-h3 text-h3 text-error">Hapus Kurikulum</h3>
+            </div>
+            <p className="text-on-surface-variant mb-2">
+              Anda akan menghapus kurikulum <strong>"{deleteTarget.nama}"</strong> beserta <strong>semua data terkait</strong> (CPL, CPMK, BK, MK, Modul, dll).
+            </p>
+            <p className="text-on-surface-variant mb-4 text-sm">
+              Ketik <strong>{deleteTarget.nama}</strong> untuk konfirmasi:
+            </p>
+            <input
+              type="text"
+              className="input-base w-full mb-4"
+              placeholder="Ketik nama kurikulum..."
+              value={deleteConfirmText}
+              onChange={e => setDeleteConfirmText(e.target.value)}
+            />
+            <div className="flex gap-3 justify-end">
+              <button onClick={() => { setDeleteTarget(null); setDeleteConfirmText(''); }} className="btn-ghost">Batal</button>
+              <button
+                onClick={handleDelete}
+                disabled={deleteConfirmText !== deleteTarget.nama}
+                className="btn-primary bg-error hover:bg-error/90 disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                Hapus Permanen
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );

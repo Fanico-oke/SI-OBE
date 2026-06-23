@@ -25,7 +25,7 @@ interface CurriculumState {
   addCurriculum: (curriculum: Omit<Curriculum, 'id' | 'status' | 'createdAt' | 'updatedAt'>) => Promise<string>;
   duplicateCurriculum: (data: any) => Promise<string>;
   updateCurriculum: (id: string, data: Partial<Curriculum>) => void;
-  deleteCurriculum: (id: string) => void;
+  deleteCurriculum: (id: string) => Promise<void>;
   setActiveCurriculum: (id: string) => void;
   resetToActive: () => void;
 }
@@ -108,9 +108,17 @@ export const useCurriculumStore = create<CurriculumState>()(
         )
       })),
 
-      deleteCurriculum: (id) => set((state) => ({
-        curriculums: state.curriculums.filter((c) => c.id !== id)
-      })),
+      deleteCurriculum: async (id) => {
+        try {
+          await axios.delete(`/api/kurikulum/${id}`);
+          set((state) => ({
+            curriculums: state.curriculums.filter((c) => c.id !== id)
+          }));
+        } catch (error) {
+          console.error('Gagal menghapus kurikulum:', error);
+          throw error;
+        }
+      },
 
       setActiveCurriculum: (id) => set((state) => {
         const found = state.curriculums.find(c => c.id === id);

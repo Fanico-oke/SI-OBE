@@ -215,4 +215,25 @@ router.post('/import', authorize('KAPRODI', 'ADMIN'), upload.single('file'), asy
   }
 });
 
+// DELETE /api/kurikulum/:id — delete kurikulum (cascade deletes all related data)
+router.delete('/:id', authorize('KAPRODI', 'ADMIN'), async (req, res) => {
+  try {
+    const id = req.params.id as string;
+
+    // Check if kurikulum exists
+    const kurikulum = await prisma.kurikulum.findUnique({ where: { id } });
+    if (!kurikulum) {
+      return res.status(404).json({ error: 'Kurikulum tidak ditemukan' });
+    }
+
+    // Delete kurikulum (cascade will handle all related data)
+    await prisma.kurikulum.delete({ where: { id } });
+
+    res.json({ success: true, message: `Kurikulum "${kurikulum.nama}" berhasil dihapus beserta semua data terkait.` });
+  } catch (error) {
+    console.error('Delete kurikulum error:', error);
+    res.status(500).json({ error: 'Gagal menghapus kurikulum. Pastikan tidak ada data terkait yang menghambat.' });
+  }
+});
+
 export default router;
