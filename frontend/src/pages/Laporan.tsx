@@ -46,8 +46,10 @@ export function Laporan() {
   useEffect(() => {
     axios.get('/api/kurikulum').then(res => {
       const list = res.data;
+      // Sort by tahunMulai descending (newest first)
+      list.sort((a: any, b: any) => (b.tahunMulai || 0) - (a.tahunMulai || 0));
       setKurikulumList(list);
-      // Default: ACTIVE first, then latest
+      // Default: ACTIVE first, then latest by year
       const active = list.find((k: any) => k.status === 'ACTIVE') || list[0];
       if (active) setSelectedKurikulumId(active.id);
     }).catch(() => {});
@@ -387,7 +389,7 @@ export function Laporan() {
               <>
                 <div className="h-[350px] mt-6 bg-gradient-to-br from-surface to-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-card">
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={semesterFilter === 'all' ? mkEvaluasi : mkEvaluasi.filter(mk => mk.semester === semesterFilter)} margin={{ top: 20, right: 30, left: 20, bottom: 5 }} barSize={40}>
+                    <BarChart data={semesterFilter === 'all' ? mkEvaluasi : mkEvaluasi.filter(mk => semesterFilter === 'Ganjil' ? mk.semester % 2 === 1 : mk.semester % 2 === 0)} margin={{ top: 20, right: 30, left: 20, bottom: 5 }} barSize={40}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--color-outline-variant)" />
                   <XAxis dataKey="nama" tick={{ fill: 'var(--color-on-surface-variant)', fontSize: 13, fontWeight: 'bold' }} axisLine={false} tickLine={false} dy={10} />
                   <YAxis domain={[0, 100]} tick={{ fill: 'var(--color-on-surface-variant)', fontWeight: 'bold' }} axisLine={false} tickLine={false} />
@@ -412,7 +414,7 @@ export function Laporan() {
                 </thead>
                 <tbody>
                   {(() => {
-                    const filteredMk = semesterFilter === 'all' ? mkEvaluasi : mkEvaluasi.filter(mk => mk.semester === semesterFilter);
+                    const filteredMk = semesterFilter === 'all' ? mkEvaluasi : mkEvaluasi.filter(mk => semesterFilter === 'Ganjil' ? mk.semester % 2 === 1 : mk.semester % 2 === 0);
                     const paginatedMk = filteredMk.slice((mkPage - 1) * mkPageSize, mkPage * mkPageSize);
                     return paginatedMk.map((mk, i) => (
                     <tr key={i}>
@@ -435,7 +437,7 @@ export function Laporan() {
               </table>
               <Pagination
                 currentPage={mkPage}
-                totalItems={(semesterFilter === 'all' ? mkEvaluasi : mkEvaluasi.filter(mk => mk.semester === semesterFilter)).length}
+                totalItems={(semesterFilter === 'all' ? mkEvaluasi : mkEvaluasi.filter(mk => semesterFilter === 'Ganjil' ? mk.semester % 2 === 1 : mk.semester % 2 === 0)).length}
                 pageSize={mkPageSize}
                 onPageChange={(page) => setMkPage(page)}
               />
